@@ -1,0 +1,20 @@
+/* Full container styles */
+.swiperContainer {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Ensure no overflow beyond container */
+}
+
+/* Default image style */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease; /* Smooth transition for zoom */
+}
+
+/* Active slide - apply zoom-out animation */
+.activeSlide .image {
+  transform: scale(1.1); /* Slightly zoomed out */
+}

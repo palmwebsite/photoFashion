@@ -1,0 +1,52 @@
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  font-size: 12px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.prevButton {
+  padding-left: 6em;
+  left: 0;
+}
+.nextButton {
+  padding-right: 6em;
+  right: 0;
+}
+.prevButton::before,
+.nextButton::after {
+  content: "";
+  width: 4em;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  top: calc(50% - 1px);
+  transition: width 0.3s ease;
+}
+.prevButton::before {
+  left: 0;
+}
+.nextButton::after {
+  right: 0;
+}
+.prevButton:hover {
+  padding-left: 90px;
+}
+.prevButton:hover::before {
+  width: 75px;
+}
+.nextButton:hover {
+  padding-right: 90px;
+}
+.nextButton:hover::after {
+  width: 75px;
+}

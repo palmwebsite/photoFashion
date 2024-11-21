@@ -9,7 +9,7 @@ export const PHOTOS: ISlide[] = [
     height: 1080,
   },
   {
-    src: "https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I",
+    src: "https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI",
 
     alt: "Sample Image",
     width: 1920,
