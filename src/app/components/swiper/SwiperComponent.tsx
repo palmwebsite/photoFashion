@@ -1,4 +1,4 @@
-"use client"; // This makes the component a Client Component
+"use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -22,7 +22,7 @@ export default function SwiperComponent() {
 
       {/* Swiper Component */}
       <Swiper
-        modules={[Navigation]} // Enable Navigation module
+        modules={[Navigation]}
         slidesPerView={1}
         loop={true}
         navigation={{
@@ -30,13 +30,11 @@ export default function SwiperComponent() {
           nextEl: '[data-swiper-nav="next"]',
         }}
       >
-        {PHOTOS.map((photo, index) => {
-          return (
-            <SwiperSlide key={index}>
-              <Slide conf={photo} />
-            </SwiperSlide>
-          );
-        })}
+        {PHOTOS.map((photo, index) => (
+          <SwiperSlide key={index} className={styles.swiperSlide}>
+            <Slide conf={photo} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

@@ -8,13 +8,14 @@ interface IProps {
 export function Slide(props: IProps) {
   const conf = props.conf;
   return (
-    <div>
+    <div className={styles.slideContainer}>
       <Image
         src={conf.src}
         alt={conf.alt}
         width={conf.width}
         height={conf.height}
         priority
+        className={styles.image}
       />
       <div className={styles.innerSlogans}>
         <h1>bla bla blaaa</h1>
