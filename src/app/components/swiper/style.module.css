@@ -1,0 +1,103 @@
+.swiperContainer {
+  position: relative;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.2em;
+  line-height: 2em;
+  font-size: 12px;
+  width: auto;
+  height: 24px;
+  background-image: none !important;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.prevButton {
+  padding-left: 6em;
+  left: 0;
+  -webkit-transition: padding-left 0.3s ease;
+  -moz-transition: padding-left 0.3s ease;
+  transition: padding-left 0.3s ease;
+}
+.nextButton {
+  padding-right: 6em;
+  right: 0;
+  -webkit-transition: padding-right 0.3s ease;
+  -moz-transition: padding-right 0.3s ease;
+  transition: padding-right 0.3s ease;
+}
+.prevButton::after {
+  content: "";
+  width: 4em;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 1px);
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+.nextButton::after {
+  content: "";
+  width: 4em;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 1px);
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+.prevButton:hover {
+  padding-left: 90px;
+}
+.prevButton:hover::after {
+  width: 75px;
+}
+.nextButton:hover {
+  padding-right: 90px;
+}
+.nextButton:hover::after {
+  width: 75px;
+}
+.innerSlogans {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  z-index: 10;
+  height: 100%;
+  width: 500px;
+}
+
+.innerSlogans h1 {
+  color: white;
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.innerSlogans h2 {
+  color: red;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
