@@ -1,6 +1,7 @@
 import { ISlide } from "./dto";
 import Image from "next/image";
 import slide from "./style.slide.module.css";
+import Link from "next/link";
 
 interface IProps {
   conf: ISlide;
@@ -24,10 +25,12 @@ export function Slide(props: IProps) {
         className={slide.image}
       />
       <div className={slide.overlay}></div>
-      <div className={slide.innerSlogans}>
-        <h1>{conf.h1}</h1>
-        <h2>{conf.h2}</h2>
-      </div>
+      <Link href={conf.href}>
+        <div className={slide.innerSlogans}>
+          <h1>{conf.h1}</h1>
+          <h2>{conf.h2}</h2>
+        </div>
+      </Link>
     </div>
   );
 }

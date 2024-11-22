@@ -1,11 +1,17 @@
 {
+  "title": "Ylicool fotoleht",
+  "description": "Kuhugi läheb kirjeldus",
   "prev": "Eelmine",
   "next": "Järgmine",
   "nav": {
     "home": "Esileht",
+    "homeDesc": "Kirjuta ise",
     "contact": "Kontakt",
+    "contactDesc": "Kontakti kirjeldus",
     "about": "Minu lugu",
-    "gallery": "Galerii"
+    "aboutDesc": "Mingi põnev elulugu",
+    "gallery": "Galerii",
+    "galleryDesc": "Väga palju pilte"
   },
   "main": {
     "h1": "bla bla blaa",
