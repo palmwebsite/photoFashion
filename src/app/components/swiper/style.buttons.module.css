@@ -5,7 +5,7 @@
   transform: translateY(-50%);
   z-index: 10;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--main-light);
   letter-spacing: 0.2em;
   line-height: 2em;
   font-size: 12px;
@@ -27,7 +27,7 @@
   content: "";
   width: 4em;
   height: 1px;
-  background-color: #fff;
+  background-color: var(--main-light);
   position: absolute;
   top: calc(50% - 1px);
   transition: width 0.3s ease;

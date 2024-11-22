@@ -34,7 +34,7 @@
 .msNavbar .msButton {
   font-size: 1.75em;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: var(--main-light);
   font-weight: 700 !important;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;

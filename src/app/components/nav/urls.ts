@@ -1,5 +1,5 @@
-import { nav } from "@/app/locales/translations.et.json";
-
+import trans from "@/app/locales/translations.et.json";
+const nav = trans.nav;
 interface IUrl {
   label: string;
   description: string;

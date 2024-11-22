@@ -16,7 +16,7 @@
   background-color: transparent;
 }
 .navbar-white .hamburgerLabel {
-  color: #fff;
+  color: var(--main-light);
 }
 .hamburgerLabel {
   display: block;
@@ -31,10 +31,10 @@
   text-transform: uppercase;
   line-height: 1.5em;
   transition: color 0.3s ease 0.4s;
-  color: #151515;
+  color: var(--main-light);
 }
 .hamburger.isActive .hamburgerLabel {
-  color: #fff !important;
+  color: var(--main-light) !important;
   transition: color 0.1s ease;
 }
 .hamburgerBox {
@@ -51,7 +51,7 @@
 .navbar-white .hamburgerInner,
 .navbar-white .hamburgerInner:after,
 .navbar-white .hamburgerInner:before {
-  background-color: #fff;
+  background-color: var(--main-light);
   transition: transform 0.3s ease 0.2s, background-color 0.3s ease 0.2s,
     opacity 0.3s ease 0.3s;
 }
@@ -66,7 +66,7 @@
   position: absolute;
   width: 30px;
   height: 3px;
-  background-color: #fff;
+  background-color: var(--main-light);
   transition: all 0.3s ease 0.5s;
 }
 .hamburgerInner:before {
@@ -82,7 +82,7 @@
 }
 .hamburger.isActive .hamburgerInner,
 .hamburger.isActive .hamburgerInner:after {
-  background-color: #fff;
+  background-color: var(--main-light);
   transition-delay: 0.1s;
 }
 .hamburger.isActive .hamburgerInner {

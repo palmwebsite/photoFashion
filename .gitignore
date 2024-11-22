@@ -20,6 +20,9 @@ node_modules
 /.next/
 /out/
 
+# documents and stuff
+/docs
+
 # production
 /build
 

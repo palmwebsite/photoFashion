@@ -6,21 +6,47 @@ const cat = trans.cat;
 
 export const PHOTOS: ISlide[] = [
   {
-    src: "https://fastly.picsum.photos/id/21/3008/2008.jpg?hmac=T8DSVNvP-QldCew7WD4jj_S3mWwxZPqdF0CNPksSko4",
-
-    alt: "Sample Image",
-    width: 1920,
-    height: 1080,
+    src: "/images/blurry.webp",
+    alt: "Blurry",
+    width: 2560,
+    height: 1703,
     ...main,
     href: URLS.about,
   },
   {
-    src: "https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI",
+    src: "/images/brown.webp",
 
-    alt: "Sample Image",
-    width: 1920,
-    height: 1080,
+    alt: "Brown",
+    width: 2560,
+    height: 1707,
     ...cat,
     href: URLS.contact,
+  },
+  {
+    src: "/images/coffee.webp",
+
+    alt: "Coffee",
+    width: 2560,
+    height: 1697,
+    ...main,
+    href: URLS.gallery,
+  },
+  {
+    src: "/images/foggy.webp",
+
+    alt: "Foggy",
+    width: 2560,
+    height: 1707,
+    ...main,
+    href: URLS.gallery,
+  },
+  {
+    src: "/images/wolf.webp",
+
+    alt: "Wolf",
+    width: 2560,
+    height: 1703,
+    ...main,
+    href: URLS.gallery,
   },
 ];
