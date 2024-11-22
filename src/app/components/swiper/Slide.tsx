@@ -15,14 +15,17 @@ export function Slide(props: IProps) {
       className={`${slide.slideContainer} ${
         props.isActive ? slide.activeSlide : ""
       } ${props.isPrev ? slide.exitingSlide : ""}`}
+      style={{ maxWidth: "100%" }}
     >
       <Image
         src={conf.src}
         alt={conf.alt}
-        width={conf.width}
-        height={conf.height}
+        // width={conf.width}
+        // height={conf.height}
         priority
         className={slide.image}
+        objectFit="cover" // Ensures the image scales to cover the container
+        layout="fill"
       />
       <div className={slide.overlay}></div>
       <Link href={conf.href}>

@@ -1,7 +1,7 @@
 .slideContainer {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +21,11 @@
   object-fit: cover;
   transition: transform 5s linear; /* Smooth transition for zoom */
   transform: scale(1.2);
+
+  position: absolute; /* Required for layout="fill" to work */
+  top: 0;
+  left: 0;
+  object-fit: cover; /* Ensures the image covers the entire area */
 }
 
 /* Active slide - apply zoom-out animation */
