@@ -1,20 +1,17 @@
-"use client";
-import { useState } from "react";
 import style from "./style.module.css";
 
 interface IProps {
   onClick: () => void;
+  isActive: boolean;
 }
-export function Hamburger(props: IProps) {
-  const [isActive, setIsActive] = useState(false);
+export function Hamburger({ onClick, isActive }: IProps) {
   return (
     <button
       className={`${style.hamburger} ${isActive ? style.isActive : ""}`}
       type="button"
       data-toggle="navigation"
       onClick={() => {
-        setIsActive(!isActive);
-        props.onClick();
+        onClick();
       }}
     >
       <span className={style.hamburgerBox}>

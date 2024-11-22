@@ -4,6 +4,7 @@ import style from "./style.module.css";
 
 interface IProps {
   isVisible: boolean;
+  handleClick: () => void;
 }
 export function Nav(props: IProps) {
   return (
@@ -11,7 +12,12 @@ export function Nav(props: IProps) {
       className={` ${style.msNavbar} ${props.isVisible ? style.isVisible : ""}`}
     >
       {NAVS.map((nav) => (
-        <Link key={nav.url} href={nav.url} className={style.navItem}>
+        <Link
+          key={nav.url}
+          href={nav.url}
+          className={style.navItem}
+          onClick={props.handleClick}
+        >
           <span className={style.msButton}> {nav.label}</span>
           <span className={style.navItem__label}> {nav.description}</span>
         </Link>
