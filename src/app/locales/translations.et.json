@@ -1,4 +1,18 @@
 {
   "prev": "Eelmine",
-  "next": "Järgmine"
+  "next": "Järgmine",
+  "nav": {
+    "home": "Esileht",
+    "contact": "Kontakt",
+    "about": "Minu lugu",
+    "gallery": "Galerii"
+  },
+  "main": {
+    "h1": "bla bla blaa",
+    "h2": "kae perrä"
+  },
+  "cat": {
+    "h1": "kassid ruulivad",
+    "h2": "ilus elu"
+  }
 }

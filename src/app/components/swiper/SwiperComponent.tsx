@@ -41,7 +41,6 @@ export default function SwiperComponent() {
       >
         {PHOTOS.map((photo, index) => (
           <SwiperSlide key={index} className={styles.swiperSlide}>
-            prev: {previousIndex} active: {activeIndex}
             <Slide
               conf={photo}
               isActive={index === activeIndex}

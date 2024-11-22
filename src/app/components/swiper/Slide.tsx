@@ -25,8 +25,8 @@ export function Slide(props: IProps) {
       />
       <div className={slide.overlay}></div>
       <div className={slide.innerSlogans}>
-        <h1>bla bla blaaa</h1>
-        <h2>kae perrä</h2>
+        <h1>{conf.h1}</h1>
+        <h2>{conf.h2}</h2>
       </div>
     </div>
   );
