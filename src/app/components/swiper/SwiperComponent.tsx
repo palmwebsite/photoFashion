@@ -8,7 +8,7 @@ import buttons from "./style.buttons.module.css";
 import { Navigation } from "swiper/modules";
 import trans from "@/app/locales/translations.et.json";
 import { Slide } from "./Slide";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ISlide } from "../dto";
 
 interface IProps {
