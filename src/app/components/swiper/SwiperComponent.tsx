@@ -21,7 +21,6 @@ interface IProps {
 export default function SwiperComponent(props: IProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState(0);
-  console.log("wwww", window.innerWidth);
   return (
     <div className={styles.swiperContainer}>
       {/* Custom Navigation Buttons */}
