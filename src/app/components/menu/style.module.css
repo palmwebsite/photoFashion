@@ -1,4 +1,4 @@
-.msNav {
+.menu {
   display: flex;
   align-items: center;
 }
@@ -13,7 +13,6 @@
   top: 0;
   width: 100%;
   height: 0%;
-  background-color: #151515;
   z-index: 5;
   overflow: hidden;
   transition: height 0.8s cubic-bezier(0.3, 1, 0.3, 1) 0.1s;
@@ -21,7 +20,14 @@
 .isVisible {
   height: 100vh;
 }
-.msNav.isVisible .heightFullVp {
+.menu.isVisible .heightFullVp {
   height: 100vh;
   transition: height 1s ease;
+}
+
+.bgDark {
+  background-color: var(--main-dark);
+}
+.bgLight {
+  background-color: var(--main-light);
 }

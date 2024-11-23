@@ -23,11 +23,12 @@ export const metadata: Metadata = {
   description,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  console.log(children);
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

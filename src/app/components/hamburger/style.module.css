@@ -15,9 +15,6 @@
   transition-property: opacity, filter, -webkit-filter;
   background-color: transparent;
 }
-.navbar-white .hamburgerLabel {
-  color: var(--main-light);
-}
 .hamburgerLabel {
   display: block;
   font-family: "Yantramanav", Arial;
@@ -31,12 +28,11 @@
   text-transform: uppercase;
   line-height: 1.5em;
   transition: color 0.3s ease 0.4s;
-  color: var(--main-light);
 }
 .hamburger.isActive .hamburgerLabel {
-  color: var(--main-light) !important;
   transition: color 0.1s ease;
 }
+
 .hamburgerBox {
   position: relative;
   display: inline-block;
@@ -48,13 +44,7 @@
   display: block;
   top: 0;
 }
-.navbar-white .hamburgerInner,
-.navbar-white .hamburgerInner:after,
-.navbar-white .hamburgerInner:before {
-  background-color: var(--main-light);
-  transition: transform 0.3s ease 0.2s, background-color 0.3s ease 0.2s,
-    opacity 0.3s ease 0.3s;
-}
+
 .hamburgerInner:after,
 .hamburgerInner:before {
   display: block;
@@ -66,7 +56,6 @@
   position: absolute;
   width: 30px;
   height: 3px;
-  background-color: var(--main-light);
   transition: all 0.3s ease 0.5s;
 }
 .hamburgerInner:before {
@@ -82,7 +71,6 @@
 }
 .hamburger.isActive .hamburgerInner,
 .hamburger.isActive .hamburgerInner:after {
-  background-color: var(--main-light);
   transition-delay: 0.1s;
 }
 .hamburger.isActive .hamburgerInner {
@@ -97,4 +85,41 @@
   width: 30px;
   -webkit-transform: translate3d(0, -16px, 0) rotate(-90deg);
   transform: translate3d(0, -16px, 0) rotate(-90deg);
+}
+
+/* Color Scheme */
+
+.hamburger.lightHamburger {
+  color: var(--main-light);
+}
+.hamburger.darkHamburger {
+  color: var(--main-dark);
+}
+.hamburger.lightHamburger.isActive .hamburgerLabel {
+  color: var(--main-light);
+}
+.hamburger.darkHamburger.isActive .hamburgerLabel {
+  color: var(--main-dark);
+}
+
+.hamburger.lightHamburger .hamburgerInner,
+.hamburger.lightHamburger .hamburgerInner:after,
+.hamburger.lightHamburger .hamburgerInner:before {
+  background-color: var(--main-light);
+}
+
+.hamburger.darkHamburger .hamburgerInner,
+.hamburger.darkHamburger .hamburgerInner:after,
+.hamburger.darkHamburger .hamburgerInner:before {
+  background-color: var(--main-dark);
+}
+
+.hamburger.lightHamburger.isActive .hamburgerInner,
+.hamburger.lightHamburger.isActive .hamburgerInner:after {
+  background-color: var(--main-light);
+}
+
+.hamburger.darkHamburger.isActive .hamburgerInner,
+.hamburger.darkHamburger.isActive .hamburgerInner:after {
+  background-color: var(--main-dark);
 }
