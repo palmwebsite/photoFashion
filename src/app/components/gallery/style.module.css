@@ -1,0 +1,32 @@
+/* components/Gallery.module.css */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+.slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}

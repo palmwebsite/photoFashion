@@ -1,0 +1,129 @@
+/**
+ * 5. Albums
+ */
+
+.filtr-container {
+  transition: height 0.5s ease-out;
+  overflow: hidden;
+}
+.filtr-btn {
+  display: inline-block;
+  margin-bottom: 2.4em;
+}
+.filtr-btn li {
+  cursor: pointer;
+  display: inline-block;
+  opacity: 0.5;
+  margin-bottom: 15px;
+  transition: opacity 0.3s ease;
+}
+.filtr-btn h6 {
+  margin-bottom: 0;
+  padding-right: 1.2em;
+}
+.filtr-btn li.active {
+  opacity: 1;
+}
+.filtr-btn li:hover {
+  opacity: 1 !important;
+}
+.album-item {
+  padding-bottom: 1.8em;
+}
+.album-item a {
+  padding-top: 60%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  z-index: 9;
+}
+.album-item__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-position: 50% 50%;
+  background: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+.album-item__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  overflow: hidden;
+}
+.album-item__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.album-item__overlay h5 {
+  position: relative;
+  color: #fff;
+  margin: 0;
+  max-width: 100%;
+  padding: 1em;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 1;
+  transform: scale(1.5);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.album-item:hover .album-item__img {
+  transform: scale(1.1);
+}
+.album-item:hover .album-item__cover,
+.album-item:hover .album-item__overlay h5 {
+  opacity: 1;
+  transform: translateZ(0);
+}
+
+/**
+ * 6. Gallery
+ */
+
+.ug-thumb-overlay:hover::before {
+  top: 15px;
+  right: 15px;
+}
+.ug-thumb-overlay:hover::after {
+  bottom: 15px;
+  left: 15px;
+}
+.ug-thumb-image {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 0;
+  transition: transform 0.3s ease,
+    opacity 2s cubic-bezier(0.16, 1.08, 0.38, 0.98) 0s !important;
+}
+.ug-thumb-image {
+  transform: scale(1) !important;
+}
+.ug-thumb-wrapper,
+.post-item {
+  pointer-events: none;
+}
+.ug-thumb-wrapper.ug-tile.ug-tile-clickable.ug-thumb-ratio-set:hover
+  .ug-thumb-image {
+  transform: scale(1.1) !important;
+}
