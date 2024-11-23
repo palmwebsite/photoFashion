@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { NAVS } from "./urls";
-import style from "./style.module.css";
+import style from "./nav.module.css";
 
 interface IProps {
   isVisible: boolean;

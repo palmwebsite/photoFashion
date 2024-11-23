@@ -1,0 +1,17 @@
+.logo {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+/* Color Scheme */
+
+.lightLogo,
+.lightLogo.logo {
+  color: var(--main-light);
+}
+
+.darkLogo,
+.darkLogo.logo {
+  color: var(--main-dark);
+}

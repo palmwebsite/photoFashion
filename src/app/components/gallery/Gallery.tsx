@@ -28,7 +28,7 @@ const Gallery = () => {
     <Page>
       {/* Image Gallery */}
       <div className={styles.gallery}>
-        {IMAGES.map((image: IImage, index: number) => (
+        {IMAGES.map((conf: IImage, index: number) => (
           <div
             key={index}
             className={styles.imageWrapper}
@@ -36,10 +36,10 @@ const Gallery = () => {
             style={{ cursor: "pointer" }}
           >
             <Image
-              src={`/images/${image.id}.webp`}
-              alt={image.alt}
-              width={image.width}
-              height={image.height}
+              src={`/images/${conf.id}.webp`}
+              alt={conf.alt}
+              width={conf.isHorizontal ? 800 : 600}
+              height={conf.isHorizontal ? 600 : 800}
               className={styles.image}
             />
           </div>

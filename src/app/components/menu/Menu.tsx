@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
 import { Hamburger } from "../hamburger/Hamburger";
-import { Nav } from "../nav/Nav";
+import { Nav } from "./Nav";
 import style from "./style.module.css";
 import { ColorScheme } from "../dto";
 import { usePathname } from "next/navigation";
+import { Logo } from "./Logo";
 const DARK_PAGES = ["/"];
 
 export function Menu() {
@@ -12,15 +13,13 @@ export function Menu() {
   const menuBgIsDark = DARK_PAGES.includes(pathname);
   const [isActive, setIsActive] = useState(false);
   const hamburgerColor: ColorScheme = menuBgIsDark ? "light" : "dark";
-
-  console.log(pathname, hamburgerColor);
-
   return (
     <div
       className={`${style.menu} ${isActive ? style.isVisible : ""} ${
         menuBgIsDark ? style.bgDark : style.bgLight
       }`}
     >
+      <Logo />
       <Hamburger
         onClick={() => setIsActive(!isActive)}
         isActive={isActive}

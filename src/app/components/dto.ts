@@ -1,8 +1,7 @@
 export type ColorScheme = "light" | "dark";
 export interface IImage {
   alt: string;
-  width: number;
-  height: number;
+  isHorizontal: boolean;
   id: string;
 }
 
