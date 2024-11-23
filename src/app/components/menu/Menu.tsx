@@ -12,18 +12,18 @@ export function Menu() {
   const pathname = usePathname();
   const menuBgIsDark = DARK_PAGES.includes(pathname);
   const [isActive, setIsActive] = useState(false);
-  const hamburgerColor: ColorScheme = menuBgIsDark ? "light" : "dark";
+  const iconsColor: ColorScheme = menuBgIsDark ? "light" : "dark";
   return (
     <div
       className={`${style.menu} ${isActive ? style.isVisible : ""} ${
         menuBgIsDark ? style.bgDark : style.bgLight
       }`}
     >
-      <Logo />
+      <Logo color={iconsColor} />
       <Hamburger
         onClick={() => setIsActive(!isActive)}
         isActive={isActive}
-        hamburgerColor={hamburgerColor}
+        hamburgerColor={iconsColor}
       />
       <div className={`${style.heightFullVp} `}>
         {/* this is what opens fully and where user sees the menu when they have clicked the menu button */}
