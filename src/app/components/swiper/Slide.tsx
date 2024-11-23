@@ -1,12 +1,13 @@
-import { ISlide } from "./dto";
 import Image from "next/image";
 import slide from "./style.slide.module.css";
 import Link from "next/link";
+import { ISlide } from "../dto";
 
 interface IProps {
   conf: ISlide;
   isActive: boolean;
   isPrev: boolean;
+  wantsZoomEffect: boolean;
 }
 export function Slide(props: IProps) {
   const conf = props.conf;
@@ -18,19 +19,23 @@ export function Slide(props: IProps) {
       style={{ maxWidth: "100%" }}
     >
       <Image
-        src={conf.src}
+        src={`/images/${conf.id}.webp`}
         alt={conf.alt}
-        className={slide.image}
+        className={`${slide.image} ${
+          props.wantsZoomEffect ? slide.zoomedIn : ""
+        }`}
         objectFit="cover" // Ensures the image scales to cover the container
         layout="fill"
       />
       <div className={slide.overlay}></div>
-      <Link href={conf.href}>
-        <div className={slide.innerSlogans}>
-          <h1>{conf.h1}</h1>
-          <h2>{conf.h2}</h2>
-        </div>
-      </Link>
+      {conf.title && (
+        <Link href={conf.title.href}>
+          <div className={slide.innerSlogans}>
+            <h1>{conf.title.h1}</h1>
+            <h2>{conf.title.h2}</h2>
+          </div>
+        </Link>
+      )}
     </div>
   );
 }

@@ -7,25 +7,34 @@ import styles from "./style.style.module.css";
 import buttons from "./style.buttons.module.css";
 import { Navigation } from "swiper/modules";
 import trans from "@/app/locales/translations.et.json";
-import { PHOTOS } from "./conf";
 import { Slide } from "./Slide";
 import { useState } from "react";
+import { ISlide } from "../dto";
 
-export default function SwiperComponent() {
+interface IProps {
+  images: ISlide[];
+  wantsTextOnNavigation: boolean;
+  initialIndex?: number;
+  wantsZoomEffect: boolean;
+}
+
+export default function SwiperComponent(props: IProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState(0);
+  console.log("wwww", window.innerWidth);
   return (
     <div className={styles.swiperContainer}>
       {/* Custom Navigation Buttons */}
       <button className={buttons.prevButton} data-swiper-nav="prev">
-        {trans.prev}
+        {props.wantsTextOnNavigation ? trans.prev : ""}
       </button>
       <button className={buttons.nextButton} data-swiper-nav="next">
-        {trans.next}
+        {props.wantsTextOnNavigation ? trans.next : ""}
       </button>
 
       {/* Swiper Component */}
       <Swiper
+        initialSlide={props.initialIndex || 0}
         modules={[Navigation]}
         slidesPerView={1}
         loop={true}
@@ -39,12 +48,13 @@ export default function SwiperComponent() {
           setActiveIndex(swiper.realIndex); // Track the active slide
         }}
       >
-        {PHOTOS.map((photo, index) => (
+        {props.images.map((photo, index: number) => (
           <SwiperSlide key={index}>
             <Slide
               conf={photo}
               isActive={index === activeIndex}
               isPrev={index === previousIndex}
+              wantsZoomEffect={props.wantsZoomEffect}
             />
           </SwiperSlide>
         ))}

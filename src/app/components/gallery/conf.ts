@@ -16,10 +16,3 @@ export const IMAGES = [
   { id: "suled", alt: "Image 3", width: 800, height: 600 },
   { id: "white", alt: "Image 3", width: 800, height: 600 },
 ];
-
-export interface IImage {
-  alt: string;
-  width: number;
-  height: number;
-  id: string;
-}

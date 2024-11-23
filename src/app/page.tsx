@@ -1,10 +1,10 @@
-import SwiperComponent from "./components/swiper/SwiperComponent"; // Adjust the path if necessary
+import { MainSlider } from "./components/mainSlider/Mainslider";
 
 export default function Home() {
   return (
     <div className={""}>
       <main className={""}>
-        <SwiperComponent />
+        <MainSlider />
       </main>
     </div>
   );

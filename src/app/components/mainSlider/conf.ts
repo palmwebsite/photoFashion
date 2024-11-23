@@ -1,52 +1,46 @@
+import { ISlide } from "../dto";
 import { URLS } from "../nav/urls";
-import { ISlide } from "./dto";
 import trans from "@/app/locales/translations.et.json";
 const main = trans.main;
 const cat = trans.cat;
 
 export const PHOTOS: ISlide[] = [
   {
-    src: "/images/blurry.webp",
+    id: "blurry",
     alt: "Blurry",
     width: 2560,
     height: 1703,
-    ...main,
-    href: URLS.about,
+    title: { ...main, href: URLS.about },
   },
   {
-    src: "/images/brown.webp",
+    id: "brown",
 
     alt: "Brown",
     width: 2560,
     height: 1707,
-    ...cat,
-    href: URLS.contact,
+    title: { ...cat, href: URLS.about },
   },
   {
-    src: "/images/coffee.webp",
-
+    id: "coffee",
     alt: "Coffee",
     width: 2560,
     height: 1697,
-    ...main,
-    href: URLS.gallery,
+    title: { ...main, href: URLS.gallery },
   },
   {
-    src: "/images/foggy.webp",
+    id: "foggy",
 
     alt: "Foggy",
     width: 2560,
     height: 1707,
-    ...main,
-    href: URLS.gallery,
+    title: { ...cat, href: URLS.about },
   },
   {
-    src: "/images/wolf.webp",
+    id: "wolf",
 
     alt: "Wolf",
     width: 2560,
     height: 1703,
-    ...main,
-    href: URLS.gallery,
+    title: { ...main, href: URLS.about },
   },
 ];
