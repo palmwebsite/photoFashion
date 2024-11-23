@@ -95,11 +95,18 @@
 .hamburger.darkHamburger {
   color: var(--main-dark);
 }
-.hamburger.lightHamburger.isActive .hamburgerLabel {
-  color: var(--main-light);
+
+.hamburger.lightHamburger .hamburgerInner {
+  background-color: var(--main-light);
 }
+
+.hamburger.darkHamburger .hamburgerInner {
+  background-color: var(--main-dark);
+}
+
+.hamburger.lightHamburger.isActive .hamburgerLabel,
 .hamburger.darkHamburger.isActive .hamburgerLabel {
-  color: var(--main-dark);
+  color: var(--main-light); /* active is always light */
 }
 
 .hamburger.lightHamburger .hamburgerInner,
@@ -114,12 +121,14 @@
   background-color: var(--main-dark);
 }
 
+.hamburger.isActive .hamburgerInner,
 .hamburger.lightHamburger.isActive .hamburgerInner,
-.hamburger.lightHamburger.isActive .hamburgerInner:after {
-  background-color: var(--main-light);
-}
-
 .hamburger.darkHamburger.isActive .hamburgerInner,
-.hamburger.darkHamburger.isActive .hamburgerInner:after {
-  background-color: var(--main-dark);
+.hamburger.isActive .hamburgerInner:after,
+.hamburger.isActive .hamburgerInner:before,
+.hamburger.lightHamburger.isActive .hamburgerInner:after,
+.hamburger.lightHamburger.isActive .hamburgerInner:before,
+.hamburger.darkHamburger.isActive .hamburgerInner:after,
+.hamburger.darkHamburger.isActive .hamburgerInner:before {
+  background-color: var(--main-light);
 }

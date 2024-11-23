@@ -20,8 +20,6 @@ export function Slide(props: IProps) {
       <Image
         src={conf.src}
         alt={conf.alt}
-        // width={conf.width}
-        // height={conf.height}
         className={slide.image}
         objectFit="cover" // Ensures the image scales to cover the container
         layout="fill"

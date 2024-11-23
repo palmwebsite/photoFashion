@@ -17,7 +17,7 @@
   cursor: pointer;
   padding: 0.75em;
   opacity: 0;
-  width: 240px;
+  width: 400px;
   margin-left: 3em;
   transition: opacity 0.3s ease;
 }
