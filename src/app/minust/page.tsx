@@ -5,7 +5,7 @@ import { Header } from "../components/layouts/Header";
 import { Description } from "../components/layouts/Description";
 import Image from "next/image";
 
-export default function About() {
+export default function Minust() {
   return (
     <Page width="900px">
       <Header>{trans.title}</Header>
@@ -17,7 +17,6 @@ export default function About() {
         height={600}
         priority
       />
-      <Paragraph></Paragraph>
       <Paragraph>{trans.p1}</Paragraph>
       <Paragraph>{trans.p2}</Paragraph>
     </Page>
