@@ -3,6 +3,7 @@ export interface IImage {
   alt: string;
   isHorizontal: boolean;
   id: string;
+  tags?: string[];
 }
 
 export interface ISlide extends IImage {

@@ -1,0 +1,20 @@
+.filter {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item {
+  font-size: 1rem;
+  line-height: 2.5;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: var(--main-grey);
+  padding-right: 8px;
+}
+.item:hover {
+  color: var(--main-dark);
+}
+.active,
+.item.active {
+  color: var(--main-dark);
+}
