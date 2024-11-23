@@ -8,7 +8,7 @@ import buttons from "./style.buttons.module.css";
 import { Navigation } from "swiper/modules";
 import trans from "@/app/locales/translations.et.json";
 import { Slide } from "./Slide";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ISlide } from "../dto";
 
 interface IProps {
@@ -21,7 +21,8 @@ interface IProps {
 
 export default function SwiperComponent(props: IProps) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [previousIndex, setPreviousIndex] = useState(0);
+  const [previousIndex, setPreviousIndex] = useState(-1);
+
   return (
     <div className={styles.swiperContainer}>
       {/* Custom Navigation Buttons */}
@@ -44,7 +45,8 @@ export default function SwiperComponent(props: IProps) {
           nextEl: '[data-swiper-nav="next"]',
         }}
         onSlideChange={(swiper) => {
-          setPreviousIndex(activeIndex); // Track the previous slide
+          console.log(swiper);
+          setPreviousIndex(swiper.isBeginning ? -1 : activeIndex); // Track the previous slide
           setActiveIndex(swiper.realIndex); // Track the active slide
         }}
       >
