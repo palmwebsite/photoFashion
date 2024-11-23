@@ -5,6 +5,7 @@
 
 .page {
   width: 100%;
+  max-width: 100%;
   padding-top: 40px;
   margin: auto;
 }
@@ -12,6 +13,12 @@
 @media (min-width: 900px) {
   .page {
     width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page {
+    width: 1200px;
   }
 }
 

@@ -16,6 +16,7 @@ interface IProps {
   wantsTextOnNavigation: boolean;
   initialIndex?: number;
   wantsZoomEffect: boolean;
+  wantsCover: boolean;
 }
 
 export default function SwiperComponent(props: IProps) {
@@ -54,6 +55,7 @@ export default function SwiperComponent(props: IProps) {
               isActive={index === activeIndex}
               isPrev={index === previousIndex}
               wantsZoomEffect={props.wantsZoomEffect}
+              wantsCover={props.wantsCover}
             />
           </SwiperSlide>
         ))}

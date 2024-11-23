@@ -7,6 +7,7 @@ export function MainSlider() {
       images={PHOTOS}
       wantsTextOnNavigation={true}
       wantsZoomEffect={true}
+      wantsCover={true}
     />
   );
 }

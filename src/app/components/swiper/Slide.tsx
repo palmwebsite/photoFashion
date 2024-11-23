@@ -8,6 +8,7 @@ interface IProps {
   isActive: boolean;
   isPrev: boolean;
   wantsZoomEffect: boolean;
+  wantsCover: boolean;
 }
 export function Slide(props: IProps) {
   const conf = props.conf;
@@ -23,9 +24,10 @@ export function Slide(props: IProps) {
         alt={conf.alt}
         className={`${slide.image} ${
           props.wantsZoomEffect ? slide.zoomedIn : ""
-        }`}
-        objectFit="cover" // Ensures the image scales to cover the container
-        layout="fill"
+        } ${props.wantsCover ? slide.coverImage : slide.containImage}`}
+        width={2560}
+        height={1700}
+        layout="responsive"
       />
       <div className={slide.overlay}></div>
       {conf.title && (

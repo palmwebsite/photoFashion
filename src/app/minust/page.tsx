@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <Page>
+    <Page width="900px">
       <Header>{trans.title}</Header>
       <Description>{trans.description}</Description>
       <Image

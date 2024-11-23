@@ -6,8 +6,8 @@ const cat = trans.cat;
 
 export const PHOTOS: ISlide[] = [
   {
-    id: "blurry",
-    alt: "Blurry",
+    id: "mic",
+    alt: "Mic",
     width: 2560,
     height: 1703,
     title: { ...main, href: URLS.about },

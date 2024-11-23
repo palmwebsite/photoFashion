@@ -58,6 +58,7 @@ const Gallery = () => {
             wantsTextOnNavigation={false}
             initialIndex={initialIndex}
             wantsZoomEffect={false}
+            wantsCover={false}
           />
         </div>
       )}

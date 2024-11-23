@@ -1,12 +1,13 @@
 .slideContainer {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden; /* Ensure the zoom effect doesn't reveal other slides */
   max-height: 100vh;
+  background-color: var(--main-dark);
 }
 .swiperSlide {
   position: relative;
@@ -16,15 +17,25 @@
 }
 
 .image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  /*width: 100%;
+   height: 100%; */
+
+  width: auto;
+  height: auto;
+  max-height: 100%;
   transition: transform 5s linear; /* Smooth transition for zoom   transform: scale(1.2);*/
 
   position: absolute; /* Required for layout="fill" to work */
   top: 0;
   left: 0;
-  object-fit: cover; /* Ensures the image covers the entire area */
+}
+.containImage,
+.image.containImage {
+  object-fit: contain; /*  Scale the image to fit the container */
+}
+.coverImage,
+.image.coverImage {
+  object-fit: cover; /* Cover the entire container */
 }
 .zoomedIn,
 .image.zoomedIn {
