@@ -1,5 +1,5 @@
 import { ISlide } from "../dto";
-import { URLS } from "../menu/urls";
+import { goToGalleryWithFilter, URLS } from "../menu/urls";
 import trans from "./texts.et.json";
 
 export const PHOTOS: ISlide[] = [
@@ -10,7 +10,7 @@ export const PHOTOS: ISlide[] = [
     title: {
       h1: trans.firstH1,
       h2: trans.firstH2,
-      href: URLS.about,
+      href: goToGalleryWithFilter("loom"),
     },
   },
   {
