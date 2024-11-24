@@ -8,7 +8,7 @@ export const PHOTOS: ISlide[] = [
     alt: "Mic",
     isHorizontal: true,
     title: {
-      h1: trans.koerapoeg,
+      h1: trans.firstH1,
       h2: trans.main.h2,
       href: URLS.about,
     },
