@@ -1,6 +1,6 @@
 "use client"; // Only needed in the App Router
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./style.module.css";
 import { FILTER, IMAGES_HORIZONTAL, IMAGES_VERTICAL } from "./conf";
@@ -13,12 +13,26 @@ import { IImage } from "../dto";
 import { Page } from "../layouts/Page";
 import { Filter } from "../filter/Filter";
 
-const Gallery = () => {
+interface IProps {
+  filterId: string;
+}
+
+export function Gallery(props: IProps) {
   const [isSliderVisible, setIsSliderVisible] = useState(false);
   const [initialIndex, setInitialIndex] = useState(0);
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFilter, setActiveFilter] = useState(
+    FILTER.some((f) => f.id === props.filterId) ? props.filterId : "all"
+  );
   const [_imagesH, setImagesH] = useState<IImage[]>(IMAGES_HORIZONTAL);
   const [_imagesV, setImagesV] = useState<IImage[]>(IMAGES_VERTICAL);
+
+  useEffect(() => {
+    console.log("activeFilter", activeFilter);
+    const filter: (image: IImage) => boolean = (image) =>
+      image.tags?.includes(activeFilter) || activeFilter === "all";
+    setImagesH(IMAGES_HORIZONTAL.filter((image) => filter(image)));
+    setImagesV(IMAGES_VERTICAL.filter((image) => filter(image)));
+  }, [activeFilter]);
 
   const handleImageClick = (index: number) => {
     console.log(index);
@@ -29,10 +43,6 @@ const Gallery = () => {
   const handleFilterClick = (id: string) => {
     console.log(id);
     setActiveFilter(id);
-    const filter: (image: IImage) => boolean = (image) =>
-      image.tags?.includes(id) || id === "all";
-    setImagesH(IMAGES_HORIZONTAL.filter((image) => filter(image)));
-    setImagesV(IMAGES_VERTICAL.filter((image) => filter(image)));
   };
 
   return (
@@ -76,9 +86,7 @@ const Gallery = () => {
       )}
     </Page>
   );
-};
-
-export default Gallery;
+}
 
 interface IImageList {
   arrOfImages: IImage[];
