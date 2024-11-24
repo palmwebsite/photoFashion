@@ -1,12 +1,10 @@
 import { Gallery } from "../components/gallery/Gallery";
 
-interface PageProps {
-  params: { galeriiId: string };
-}
-
-export default async function Galerii({ params }: PageProps) {
+export default async function Galerii({ params }: any) {
   // Ensure params are awaited properly
+  const prms = await params;
   const { galeriiId } = await params;
+  console.log(prms);
 
   // Decode the URL-encoded value
   const decodedValue = decodeURIComponent(galeriiId);
