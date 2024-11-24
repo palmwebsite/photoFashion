@@ -1,41 +1,59 @@
 import { ISlide } from "../dto";
 import { URLS } from "../menu/urls";
-import trans from "@/app/locales/translations.et.json";
-const main = trans.main;
-const cat = trans.cat;
+import trans from "./texts.et.json";
 
 export const PHOTOS: ISlide[] = [
   {
     id: "mic",
     alt: "Mic",
     isHorizontal: true,
-    title: { ...main, href: URLS.about },
+    title: {
+      h1: trans.koerapoeg,
+      h2: trans.main.h2,
+      href: URLS.about,
+    },
   },
   {
     id: "brown",
 
     alt: "Brown",
     isHorizontal: true,
-    title: { ...cat, href: URLS.about },
+    title: {
+      h1: trans.main.h1,
+      h2: trans.main.h2,
+      href: URLS.about,
+    },
   },
   {
     id: "coffee",
     alt: "Coffee",
     isHorizontal: true,
-    title: { ...main, href: URLS.gallery },
+    title: {
+      h1: trans.main.h1,
+      h2: trans.main.h2,
+      href: URLS.about,
+    },
   },
   {
     id: "foggy",
 
     alt: "Foggy",
     isHorizontal: true,
-    title: { ...cat, href: URLS.about },
+    title: {
+      h1: trans.main.h1,
+      h2: trans.main.h2,
+      href: URLS.about,
+    },
   },
   {
     id: "wolf",
 
     alt: "Wolf",
     isHorizontal: true,
-    title: { ...main, href: URLS.about },
+    title: {
+      h1: trans.main.h1,
+      h2: trans.main.h2,
+      href: URLS.about,
+    },
   },
 ];
