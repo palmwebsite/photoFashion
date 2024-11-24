@@ -1,12 +1,13 @@
 import { IImage } from "../dto";
 import { IFilter } from "../filter/Filter";
 
-type FilterType = "all" | "loom" | "vertical" | "kleit";
+type FilterType = "all" | "loom" | "vertical" | "kleit" | "ilus";
 export const FILTER: IFilter<FilterType>[] = [
   { id: "all", label: "Kõik" },
   { id: "loom", label: "Loomaga" },
   { id: "kleit", label: "Kleidiga" },
   { id: "vertical", label: "Vertikaalne" },
+  { id: "ilus", label: "Ilusad tüdrukud" },
 ];
 
 const _IMAGES: IImage[] = [
@@ -18,9 +19,9 @@ const _IMAGES: IImage[] = [
   { id: "maarja", alt: "Image 3", isHorizontal: true },
   { id: "pink", alt: "Image 3", isHorizontal: true },
   { id: "pintsak", alt: "Image 3", isHorizontal: true },
-  { id: "kardin", alt: "Image 3", isHorizontal: true, tags: ["kleit"] },
+  { id: "kardin", alt: "Image 3", isHorizontal: true, tags: ["kleit", "ilus"] },
   { id: "boyband", alt: "Image 3", isHorizontal: true },
-  { id: "puudel", alt: "Image 3", isHorizontal: true, tags: ["loom"] },
+  { id: "puudel", alt: "Image 3", isHorizontal: true, tags: ["loom", "ilus"] },
   { id: "mic", alt: "Image 3", isHorizontal: true },
   { id: "kampsun", alt: "Image 3", isHorizontal: true },
   { id: "kleit", alt: "Image 3", isHorizontal: false, tags: ["kleit"] },
@@ -28,6 +29,7 @@ const _IMAGES: IImage[] = [
   { id: "kana", alt: "Image 3", isHorizontal: true, tags: ["loom"] },
   { id: "suled", alt: "Image 3", isHorizontal: true },
   { id: "white", alt: "Image 3", isHorizontal: true },
+  { id: "mashabassujuures", alt: "Image 3", isHorizontal: false, tags: ["kleit"] },
   { id: "piret1", alt: "Image 3", isHorizontal: false, tags: ["vertical"] },
   {
     id: "piret2",
