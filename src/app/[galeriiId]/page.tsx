@@ -1,10 +1,10 @@
 import { Gallery } from "../components/gallery/Gallery";
 
-interface IParams {
+interface PageProps {
   params: { galeriiId: string };
 }
 
-export default async function Galerii({ params }: IParams) {
+export default async function Galerii({ params }: PageProps) {
   // Ensure params are awaited properly
   const { galeriiId } = await params;
 
