@@ -87,8 +87,9 @@ interface IImageList {
 }
 
 function ImageList({ arrOfImages, type, handleImageClick }: IImageList) {
+  const isHorizontal = type === "h";
   const handleOnClick = (index: number) => {
-    const newIndex = type === "h" ? index : index + IMAGES_HORIZONTAL.length;
+    const newIndex = isHorizontal ? index : index + IMAGES_HORIZONTAL.length;
     handleImageClick(newIndex);
   };
   return (
@@ -98,7 +99,7 @@ function ImageList({ arrOfImages, type, handleImageClick }: IImageList) {
         <div
           key={index}
           className={`${styles.imageWrapper} ${
-            type === "v" ? styles.vertical : styles.horizontal
+            isHorizontal ? styles.horizontal : styles.vertical
           }`}
           onClick={() => handleOnClick(index)}
           style={{ cursor: "pointer" }}
@@ -106,8 +107,8 @@ function ImageList({ arrOfImages, type, handleImageClick }: IImageList) {
           <Image
             src={`/images/${conf.id}.webp`}
             alt={conf.alt}
-            width={conf.isHorizontal ? 800 : 600}
-            height={conf.isHorizontal ? 600 : 800}
+            width={isHorizontal ? 800 : 600}
+            height={isHorizontal ? 600 : 800}
             className={styles.image}
           />
         </div>
