@@ -46,8 +46,29 @@ export default function SwiperComponent(props: IProps) {
         }}
         onSlideChange={(swiper) => {
           console.log(swiper);
-          setPreviousIndex(swiper.isBeginning ? -1 : activeIndex); // Track the previous slide
-          setActiveIndex(swiper.realIndex); // Track the active slide
+          const _realIndex = swiper.realIndex;
+          console.log("_realIndex", JSON.stringify(_realIndex));
+          const prevIndex =
+            _realIndex === props.initialIndex || swiper.isBeginning
+              ? -1
+              : activeIndex;
+          console.log(
+            "is beginning",
+            swiper.isBeginning,
+            "calculated prev index",
+            prevIndex
+          );
+          console.log(
+            "swiper activeindex:",
+            swiper.activeIndex,
+            "swiper previousRealIndex",
+            (swiper as any).previousRealIndex,
+            "swiper realIndex",
+            swiper.previousIndex
+          );
+
+          setPreviousIndex(prevIndex); // Track the previous slide
+          setActiveIndex(_realIndex); // Track the active slide
         }}
       >
         {props.images.map((photo, index: number) => (

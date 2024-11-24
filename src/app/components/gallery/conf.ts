@@ -1,4 +1,4 @@
-import { IImage } from "../dto";
+import { IImage, IImageBase } from "../dto";
 import { IFilter } from "../filter/Filter";
 
 type FilterType = "all" | "loom" | "vertical" | "kleit" | "ilus";
@@ -10,7 +10,7 @@ export const FILTER: IFilter<FilterType>[] = [
   { id: "ilus", label: "Ilusad tüdrukud" },
 ];
 
-export const IMAGES_HORIZONTAL: IImage[] = [
+const _IMAGES_HORIZONTAL: IImageBase[] = [
   { id: "blurry", alt: "Image 1", tags: [""] },
   { id: "coffee", alt: "Image 2" },
   { id: "foggy", alt: "Image 3", tags: ["kleit"] },
@@ -34,7 +34,7 @@ export const IMAGES_HORIZONTAL: IImage[] = [
   { id: "wolf", alt: "Image 3", tags: ["loom", "kleit"] },
 ];
 
-export const IMAGES_VERTICAL: IImage[] = [
+const _IMAGES_VERTICAL: IImageBase[] = [
   {
     id: "mashabassujuures",
     alt: "Image 3",
@@ -58,3 +58,10 @@ export const IMAGES_VERTICAL: IImage[] = [
   { id: "binokkel", alt: "Image 3", tags: ["vertical"] },
   { id: "kasukas", alt: "Image 3", tags: ["vertical"] },
 ];
+
+export const IMAGES_HORIZONTAL: IImage[] = _IMAGES_HORIZONTAL.map((image) => {
+  return { ...image, isHorizontal: true };
+});
+export const IMAGES_VERTICAL: IImage[] = _IMAGES_VERTICAL.map((image) => {
+  return { ...image, isHorizontal: false };
+});
