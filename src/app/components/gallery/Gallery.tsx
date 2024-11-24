@@ -23,11 +23,10 @@ export function Gallery(props: IProps) {
   const [activeFilter, setActiveFilter] = useState(
     FILTER.some((f) => f.id === props.filterId) ? props.filterId : "all"
   );
-  const [_imagesH, setImagesH] = useState<IImage[]>(IMAGES_HORIZONTAL);
-  const [_imagesV, setImagesV] = useState<IImage[]>(IMAGES_VERTICAL);
+  const [_imagesH, setImagesH] = useState<IImage[]>([]);
+  const [_imagesV, setImagesV] = useState<IImage[]>([]);
 
   useEffect(() => {
-    console.log("activeFilter", activeFilter);
     const filter: (image: IImage) => boolean = (image) =>
       image.tags?.includes(activeFilter) || activeFilter === "all";
     setImagesH(IMAGES_HORIZONTAL.filter((image) => filter(image)));
