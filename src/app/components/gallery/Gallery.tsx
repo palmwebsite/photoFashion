@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./style.module.css";
-import { FILTER, IMAGES } from "./conf";
+import { FILTER, IMAGES_HORIZONTAL, IMAGES_VERTICAL } from "./conf";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -17,7 +17,8 @@ const Gallery = () => {
   const [isSliderVisible, setIsSliderVisible] = useState(false);
   const [initialIndex, setInitialIndex] = useState(0);
   const [activeFilter, setActiveFilter] = useState("all");
-  const [_images, setImages] = useState(IMAGES);
+  const [_imagesH, setImagesH] = useState<IImage[]>(IMAGES_HORIZONTAL);
+  const [_imagesV, setImagesV] = useState<IImage[]>(IMAGES_VERTICAL);
 
   const handleImageClick = (index: number) => {
     console.log(index);
@@ -28,9 +29,10 @@ const Gallery = () => {
   const handleFilterClick = (id: string) => {
     console.log(id);
     setActiveFilter(id);
-    setImages(
-      IMAGES.filter((image) => image.tags?.includes(id) || id === "all")
-    );
+    const filter: (image: IImage) => boolean = (image) =>
+      image.tags?.includes(id) || id === "all";
+    setImagesH(IMAGES_HORIZONTAL.filter((image) => filter(image)));
+    setImagesV(IMAGES_VERTICAL.filter((image) => filter(image)));
   };
 
   return (
@@ -41,22 +43,19 @@ const Gallery = () => {
         activeId={activeFilter}
       />
       <div className={styles.gallery}>
-        {_images.map((conf: IImage, index: number) => (
-          <div
-            key={index}
-            className={styles.imageWrapper}
-            onClick={() => handleImageClick(index)}
-            style={{ cursor: "pointer" }}
-          >
-            <Image
-              src={`/images/${conf.id}.webp`}
-              alt={conf.alt}
-              width={conf.isHorizontal ? 800 : 600}
-              height={conf.isHorizontal ? 600 : 800}
-              className={styles.image}
-            />
-          </div>
-        ))}
+        <ImageList
+          arrOfImages={_imagesH}
+          type={"h"}
+          handleImageClick={handleImageClick}
+        />{" "}
+      </div>
+
+      <div className={styles.gallery}>
+        <ImageList
+          arrOfImages={_imagesV}
+          type={"v"}
+          handleImageClick={handleImageClick}
+        />
       </div>
 
       {/* Full-Width and Full-Height Swiper Slider */}
@@ -67,7 +66,7 @@ const Gallery = () => {
             onClick={() => setIsSliderVisible(false)}
           />
           <SwiperComponent
-            images={IMAGES}
+            images={IMAGES_HORIZONTAL.concat(IMAGES_VERTICAL)}
             wantsTextOnNavigation={false}
             initialIndex={initialIndex}
             wantsZoomEffect={false}
@@ -80,3 +79,39 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+interface IImageList {
+  arrOfImages: IImage[];
+  type: "h" | "v";
+  handleImageClick: (index: number) => void;
+}
+
+function ImageList({ arrOfImages, type, handleImageClick }: IImageList) {
+  const handleOnClick = (index: number) => {
+    const newIndex = type === "h" ? index : index + IMAGES_HORIZONTAL.length;
+    handleImageClick(newIndex);
+  };
+  return (
+    <>
+      {" "}
+      {arrOfImages.map((conf: IImage, index: number) => (
+        <div
+          key={index}
+          className={`${styles.imageWrapper} ${
+            type === "v" ? styles.vertical : styles.horizontal
+          }`}
+          onClick={() => handleOnClick(index)}
+          style={{ cursor: "pointer" }}
+        >
+          <Image
+            src={`/images/${conf.id}.webp`}
+            alt={conf.alt}
+            width={conf.isHorizontal ? 800 : 600}
+            height={conf.isHorizontal ? 600 : 800}
+            className={styles.image}
+          />
+        </div>
+      ))}
+    </>
+  );
+}

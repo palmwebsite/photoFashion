@@ -1,27 +1,43 @@
 /* components/Gallery.module.css */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  justify-content: flex-start;
   gap: 16px;
-  padding: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
 .imageWrapper {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.vertical,
+.imageWrapper.vertical {
+  height: 369px;
+  width: 278px;
+}
+
+.horizontal,
+.imageWrapper.horizontal {
+  height: 175px;
+  width: 278px;
+}
+
+.imageWrapper:hover {
+  transform: scale(1.05);
 }
 
 .image {
   object-fit: cover;
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
 }
 
-.image:hover {
+/* .image:hover {
   transform: scale(1.05);
-}
+} */
 .slider {
   position: fixed;
   top: 0;

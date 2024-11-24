@@ -9,7 +9,7 @@ export const PHOTOS: ISlide[] = [
     isHorizontal: true,
     title: {
       h1: trans.firstH1,
-      h2: trans.main.h2,
+      h2: trans.firstH2,
       href: URLS.about,
     },
   },
@@ -19,8 +19,8 @@ export const PHOTOS: ISlide[] = [
     alt: "Brown",
     isHorizontal: true,
     title: {
-      h1: trans.main.h1,
-      h2: trans.main.h2,
+      h1: trans.scndH1,
+      h2: trans.scndH2,
       href: URLS.about,
     },
   },
@@ -29,8 +29,8 @@ export const PHOTOS: ISlide[] = [
     alt: "Coffee",
     isHorizontal: true,
     title: {
-      h1: trans.main.h1,
-      h2: trans.main.h2,
+      h1: trans.thirdH1,
+      h2: trans.thirdH2,
       href: URLS.about,
     },
   },
@@ -40,8 +40,8 @@ export const PHOTOS: ISlide[] = [
     alt: "Foggy",
     isHorizontal: true,
     title: {
-      h1: trans.main.h1,
-      h2: trans.main.h2,
+      h1: trans.fourH1,
+      h2: trans.fourH2,
       href: URLS.about,
     },
   },
@@ -51,8 +51,8 @@ export const PHOTOS: ISlide[] = [
     alt: "Wolf",
     isHorizontal: true,
     title: {
-      h1: trans.main.h1,
-      h2: trans.main.h2,
+      h1: trans.fiveH1,
+      h2: trans.fiveH2,
       href: URLS.about,
     },
   },

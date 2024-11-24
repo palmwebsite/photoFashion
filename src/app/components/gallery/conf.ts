@@ -10,7 +10,7 @@ export const FILTER: IFilter<FilterType>[] = [
   { id: "ilus", label: "Ilusad tüdrukud" },
 ];
 
-const _IMAGES: IImage[] = [
+export const IMAGES_HORIZONTAL: IImage[] = [
   { id: "blurry", alt: "Image 1", isHorizontal: true, tags: [""] },
   { id: "coffee", alt: "Image 2", isHorizontal: true },
   { id: "foggy", alt: "Image 3", isHorizontal: true, tags: ["kleit"] },
@@ -24,12 +24,24 @@ const _IMAGES: IImage[] = [
   { id: "puudel", alt: "Image 3", isHorizontal: true, tags: ["loom", "ilus"] },
   { id: "mic", alt: "Image 3", isHorizontal: true },
   { id: "kampsun", alt: "Image 3", isHorizontal: true },
-  { id: "kleit", alt: "Image 3", isHorizontal: false, tags: ["kleit"] },
   { id: "brown", alt: "Image 3", isHorizontal: true },
   { id: "kana", alt: "Image 3", isHorizontal: true, tags: ["loom"] },
   { id: "suled", alt: "Image 3", isHorizontal: true },
   { id: "white", alt: "Image 3", isHorizontal: true },
-  { id: "mashabassujuures", alt: "Image 3", isHorizontal: false, tags: ["kleit"] },
+  { id: "suits", alt: "Image 3", isHorizontal: true },
+  { id: "roosa", alt: "Image 3", isHorizontal: true },
+  { id: "suled", alt: "Image 3", isHorizontal: true },
+  { id: "wolf", alt: "Image 3", isHorizontal: true, tags: ["loom", "kleit"] },
+];
+
+export const IMAGES_VERTICAL: IImage[] = [
+  {
+    id: "mashabassujuures",
+    alt: "Image 3",
+    isHorizontal: false,
+    tags: ["kleit"],
+  },
+  { id: "kleit", alt: "Image 3", isHorizontal: false, tags: ["kleit"] },
   { id: "piret1", alt: "Image 3", isHorizontal: false, tags: ["vertical"] },
   {
     id: "piret2",
@@ -45,13 +57,4 @@ const _IMAGES: IImage[] = [
   },
   { id: "binokkel", alt: "Image 3", isHorizontal: false, tags: ["vertical"] },
   { id: "kasukas", alt: "Image 3", isHorizontal: false, tags: ["vertical"] },
-  { id: "suits", alt: "Image 3", isHorizontal: true },
-  { id: "roosa", alt: "Image 3", isHorizontal: true },
-  { id: "suled", alt: "Image 3", isHorizontal: true },
-  { id: "wolf", alt: "Image 3", isHorizontal: true, tags: ["loom", "kleit"] },
 ];
-
-export const IMAGES = _IMAGES.sort((a, b) => {
-  if (a.isHorizontal === b.isHorizontal) return 0; // Keep order if both are the same
-  return a.isHorizontal ? -1 : 1; // Move `true` before `false`
-});
