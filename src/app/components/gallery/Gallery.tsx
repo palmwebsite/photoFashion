@@ -54,6 +54,7 @@ export function Gallery(props: IProps) {
           arrOfImages={_imagesH}
           type={"h"}
           handleImageClick={handleImageClick}
+          horizontalImageLength={_imagesH.length}
         />{" "}
       </div>
 
@@ -62,6 +63,7 @@ export function Gallery(props: IProps) {
           arrOfImages={_imagesV}
           type={"v"}
           handleImageClick={handleImageClick}
+          horizontalImageLength={_imagesH.length}
         />
       </div>
 
@@ -73,7 +75,7 @@ export function Gallery(props: IProps) {
             onClick={() => setIsSliderVisible(false)}
           />
           <SwiperComponent
-            images={IMAGES_HORIZONTAL.concat(IMAGES_VERTICAL)}
+            images={_imagesH.concat(_imagesV)}
             wantsTextOnNavigation={false}
             initialIndex={initialIndex}
             wantsZoomEffect={false}
@@ -89,12 +91,18 @@ interface IImageList {
   arrOfImages: IImage[];
   type: "h" | "v";
   handleImageClick: (index: number) => void;
+  horizontalImageLength: number;
 }
 
-function ImageList({ arrOfImages, type, handleImageClick }: IImageList) {
+function ImageList({
+  arrOfImages,
+  type,
+  handleImageClick,
+  horizontalImageLength,
+}: IImageList) {
   const isHorizontal = type === "h";
   const handleOnClick = (index: number) => {
-    const newIndex = isHorizontal ? index : index + IMAGES_HORIZONTAL.length;
+    const newIndex = isHorizontal ? index : index + horizontalImageLength;
     handleImageClick(newIndex);
   };
   return (
