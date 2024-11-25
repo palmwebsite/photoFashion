@@ -98,6 +98,10 @@
   letter-spacing: 0.8em;
 }
 @media screen and (orientation: portrait) {
+  .image.layoutResponsive {
+    width: auto;
+    height: 100%;
+  }
   .innerSlogans {
     left: 20px; /* Align to the left */
     bottom: 90px;
