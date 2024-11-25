@@ -1,12 +1,6 @@
 .msHeader {
-  position: fixed;
   width: 100%;
-  background-color: var(--main-light);
   z-index: 20;
-}
-.navbarWhite {
-  color: var(--main-light);
-  background-color: transparent !important;
 }
 /* 2.1 Menu */
 

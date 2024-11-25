@@ -3,6 +3,7 @@ import { Page } from "../components/layouts/Page";
 import { Paragraph } from "../components/layouts/Paragraph";
 import { Header } from "../components/layouts/Header";
 import { Description } from "../components/layouts/Description";
+import styles from "./style.module.css";
 import Image from "next/image";
 
 export default function Minust() {
@@ -16,6 +17,7 @@ export default function Minust() {
         width={600}
         height={600}
         priority
+        className={styles.image}
       />
       <Paragraph>{trans.p1}</Paragraph>
       <Paragraph>{trans.p2}</Paragraph>

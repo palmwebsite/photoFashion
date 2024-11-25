@@ -45,7 +45,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <header className={`${style.msHeader} ${style.navbarWhite}`}>
+        <header className={`${style.msHeader}`}>
           <Menu />
         </header>
 
