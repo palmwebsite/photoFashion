@@ -56,4 +56,15 @@ export const PHOTOS: ISlide[] = [
       href: URLS.about,
     },
   },
+  {
+    id: "beach",
+
+    alt: "beach",
+    isHorizontal: true,
+    title: {
+      h1: trans.sixH1,
+      h2: trans.sixH2,
+      href: URLS.about,
+    },
+  },
 ];
