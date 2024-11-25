@@ -3,6 +3,9 @@ import { goToGalleryWithFilter, URLS } from "../menu/urls";
 import trans from "./texts.et.json";
 
 // Kui slaidi lisad, pead siia ka uue teksti lisama (kui talle linki tahad peale)
+// Siit esimene object (objekt = see, mis on {} vahel) läheb esimesele pildile
+// Teine läheb teisele jne.
+// landscape ja portrait piltidele lähevad samad testid.
 const TEXTS: ISlideHref[] = [
   {
     h1: trans.firstH1,
@@ -35,6 +38,8 @@ const TEXTS: ISlideHref[] = [
     href: URLS.about,
   },
 ];
+
+// Landscape fotod
 const HORIZONTAL_PHOTOS: IImageBase[] = [
   {
     id: "mic",
@@ -51,21 +56,19 @@ const HORIZONTAL_PHOTOS: IImageBase[] = [
   },
   {
     id: "foggy",
-
     alt: "Foggy",
   },
   {
     id: "wolf",
-
     alt: "Wolf",
   },
   {
     id: "beach",
-
     alt: "beach",
   },
 ];
 
+// Portrait fotod
 const VERTICAL_PHOTOS: IImageBase[] = [
   {
     id: "binokkel",
