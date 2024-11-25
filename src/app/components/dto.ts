@@ -1,9 +1,12 @@
 export type ColorScheme = "light" | "dark";
-export interface IImage {
+export interface IImageBase {
   alt: string;
-  isHorizontal: boolean;
   id: string;
   tags?: string[];
+}
+
+export interface IImage extends IImageBase {
+  isHorizontal: boolean;
 }
 
 export interface ISlide extends IImage {

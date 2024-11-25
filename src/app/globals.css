@@ -10,12 +10,16 @@
   --font-size-large: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --main-dark: #fff;
+    --main-light: #000;
+    --main-red: #ff0000;
+    --main-grey: #666262;
   }
-}
+} */
 
 html,
 body {
