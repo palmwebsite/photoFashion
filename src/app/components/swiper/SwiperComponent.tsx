@@ -3,13 +3,15 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import styles from "./style.style.module.css";
 import buttons from "./style.buttons.module.css";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import trans from "@/app/locales/translations.et.json";
 import { Slide } from "./Slide";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ISlide } from "../dto";
+import { text } from "stream/consumers";
 
 interface IProps {
   images: ISlide[];
@@ -20,9 +22,20 @@ interface IProps {
 }
 
 export default function SwiperComponent(props: IProps) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [previousIndex, setPreviousIndex] = useState(-1);
+  console.log("rerender");
+  const [activeIndex, setActiveIndex] = useState<number | undefined>();
+  const [indexHistory, setIndexHistory] = useState<number[]>([]);
 
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index: number, className: string) {
+      return `<span class="${styles.progressBar} ${className}"></span>`;
+    },
+  };
+
+  useEffect(() => {
+    console.log("indexHistory", indexHistory);
+  }, [indexHistory]);
   return (
     <div className={styles.swiperContainer}>
       {/* Custom Navigation Buttons */}
@@ -32,11 +45,11 @@ export default function SwiperComponent(props: IProps) {
       <button className={buttons.nextButton} data-swiper-nav="next">
         {props.wantsTextOnNavigation ? trans.next : ""}
       </button>
-
       {/* Swiper Component */}
       <Swiper
+        pagination={pagination}
         initialSlide={props.initialIndex || 0}
-        modules={[Navigation]}
+        modules={[Navigation, Pagination]}
         slidesPerView={1}
         loop={true}
         speed={1500} /* Slower slide transition (in milliseconds) */
@@ -47,28 +60,19 @@ export default function SwiperComponent(props: IProps) {
         onSlideChange={(swiper) => {
           console.log(swiper);
           const _realIndex = swiper.realIndex;
-          console.log("_realIndex", JSON.stringify(_realIndex));
-          const prevIndex =
-            _realIndex === props.initialIndex || swiper.isBeginning
-              ? -1
-              : activeIndex;
-          console.log(
-            "is beginning",
-            swiper.isBeginning,
-            "calculated prev index",
-            prevIndex
-          );
-          console.log(
-            "swiper activeindex:",
-            swiper.activeIndex,
-            "swiper previousRealIndex",
-            (swiper as any).previousRealIndex,
-            "swiper realIndex",
-            swiper.previousIndex
-          );
-
-          setPreviousIndex(prevIndex); // Track the previous slide
           setActiveIndex(_realIndex); // Track the active slide
+
+          setIndexHistory((prev) => {
+            if (prev.length > 0) {
+              if (prev[prev.length - 1] !== _realIndex) {
+                return [...prev, _realIndex];
+              } else {
+                return prev;
+              }
+            } else {
+              return [_realIndex];
+            }
+          });
         }}
       >
         {props.images.map((photo, index: number) => (
@@ -76,7 +80,7 @@ export default function SwiperComponent(props: IProps) {
             <Slide
               conf={photo}
               isActive={index === activeIndex}
-              isPrev={index === previousIndex}
+              isPrev={index === indexHistory[indexHistory.length - 2]}
               wantsZoomEffect={props.wantsZoomEffect}
               wantsCover={props.wantsCover}
             />

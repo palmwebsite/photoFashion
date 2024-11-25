@@ -1,6 +1,7 @@
 import Link from "next/link";
 import style from "./logo.module.css";
 import { ColorScheme } from "../dto";
+import trans from "@/app/locales/translations.et.json";
 
 interface IProps {
   color: ColorScheme;
@@ -12,7 +13,7 @@ export function Logo(props: IProps) {
         props.color === "light" ? style.lighLogo : style.darkLogo
       }`}
     >
-      <Link href={"/"}>LOGO</Link>
+      <Link href={"/"}>{trans.menu.home}</Link>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 {
-  "title": "Ylicool fotoleht",
-  "description": "Kuhugi läheb kirjeldus",
+  "metaTitle": "Fotograaf Madis Palm",
+  "metaDescription": "Moefoto, reklaamfoto, pulmafotograafia, portreefoto, tootefoto, ürituste fotograafia",
   "prev": "Eelmine",
   "next": "Järgmine",
   "nav": {
@@ -12,5 +12,9 @@
     "aboutDesc": "Mingi põnev elulugu",
     "gallery": "Galerii",
     "galleryDesc": "Väga palju pilte"
+  },
+  "menu": {
+    "menu": "menu",
+    "home": "kodu"
   }
 }

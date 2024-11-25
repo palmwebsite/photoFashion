@@ -22,12 +22,11 @@ export function Slide(props: IProps) {
       <Image
         src={`/images/${conf.id}.webp`}
         alt={conf.alt}
-        className={`${slide.image} ${
+        className={`${slide.image} ${slide.layoutResponsive} ${
           props.wantsZoomEffect ? slide.zoomedIn : ""
         } ${props.wantsCover ? slide.coverImage : slide.containImage}`}
         width={conf.isHorizontal ? 2560 : 1930}
         height={conf.isHorizontal ? 1700 : 2560}
-        layout="responsive"
       />
       <div className={slide.overlay}></div>
       {conf.title && (

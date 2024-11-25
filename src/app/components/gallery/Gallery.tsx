@@ -4,9 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./style.module.css";
 import { FILTER, IMAGES_HORIZONTAL, IMAGES_VERTICAL } from "./conf";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+
 import SwiperComponent from "../swiper/SwiperComponent";
 import { Close } from "../hamburger/Close";
 import { IImage } from "../dto";

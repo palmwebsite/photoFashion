@@ -1,5 +1,6 @@
 import { ColorScheme } from "../dto";
 import style from "./style.module.css";
+import trans from "@/app/locales/translations.et.json";
 
 interface IProps {
   onClick: () => void;
@@ -20,7 +21,7 @@ export function Hamburger({ onClick, isActive, hamburgerColor }: IProps) {
       }}
     >
       <span className={style.hamburgerBox}>
-        <span className={style.hamburgerLabel}>menu</span>
+        <span className={style.hamburgerLabel}>{trans.menu.menu}</span>
         <span className={style.hamburgerInner}></span>
       </span>
     </button>
