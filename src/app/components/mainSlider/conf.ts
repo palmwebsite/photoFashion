@@ -68,17 +68,16 @@ const HORIZONTAL_PHOTOS: IImageBase[] = [
 
 const VERTICAL_PHOTOS: IImageBase[] = [
   {
-    id: "kasukad",
-    alt: "kasukad",
+    id: "binokkel",
+    alt: "binokkel",
   },
   {
     id: "kleit",
-
     alt: "kleit",
   },
   {
-    id: "seelik",
-    alt: "seelik",
+    id: "piret2",
+    alt: "piret2",
   },
 ];
 
