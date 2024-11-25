@@ -43,6 +43,7 @@ const _IMAGES_VERTICAL: IImageBase[] = [
   },
   { id: "kleit", alt: "Image 3", tags: ["kleit"] },
   { id: "piret1", alt: "Image 3", tags: ["vertical"] },
+  { id: "kasukad", alt: "Image 3", tags: ["vertical"] },
   {
     id: "piret2",
     alt: "Image 3",
