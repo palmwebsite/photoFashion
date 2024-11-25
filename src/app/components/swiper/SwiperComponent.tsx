@@ -11,7 +11,6 @@ import trans from "@/app/locales/translations.et.json";
 import { Slide } from "./Slide";
 import { useEffect, useState } from "react";
 import { ISlide } from "../dto";
-import { text } from "stream/consumers";
 
 interface IProps {
   images: ISlide[];
@@ -47,6 +46,7 @@ export default function SwiperComponent(props: IProps) {
       </button>
       {/* Swiper Component */}
       <Swiper
+        className={styles.mySwiper}
         pagination={pagination}
         initialSlide={props.initialIndex || 0}
         modules={[Navigation, Pagination]}
