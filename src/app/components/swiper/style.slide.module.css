@@ -98,7 +98,7 @@
   letter-spacing: 0.8em;
 }
 @media screen and (orientation: portrait) {
-  .image.layoutResponsive {
+  .image.layoutResponsive.coverImage {
     width: auto;
     height: 100%;
   }
