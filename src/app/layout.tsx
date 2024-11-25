@@ -5,7 +5,7 @@ import trans from "@/app/locales/translations.et.json";
 import { Menu } from "./components/menu/Menu";
 import style from "./page.module.css";
 
-const { title, description } = trans;
+const { metaTitle, metaDescription } = trans;
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,8 +19,22 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: metaTitle,
+  description: metaDescription,
+  icons: [
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "16x16",
+      url: "/favicon-16x16.png",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      sizes: "32x32",
+      url: "/favicon-32x32.png",
+    },
+  ],
 };
 
 export default async function RootLayout({
@@ -28,7 +42,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log(children);
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
