@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "./style.style.module.css";
 import buttons from "./style.buttons.module.css";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Keyboard } from "swiper/modules";
 import trans from "@/app/locales/translations.et.json";
 import { Slide } from "./Slide";
 import { useEffect, useState } from "react";
@@ -28,7 +28,7 @@ export default function SwiperComponent(props: IProps) {
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
-      return `<span class="${styles.progressBar} ${className}"></span>`;
+      return `<span class="${styles.progressBarItem} ${className}"></span>`;
     },
   };
 
@@ -49,7 +49,8 @@ export default function SwiperComponent(props: IProps) {
         className={styles.mySwiper}
         pagination={pagination}
         initialSlide={props.initialIndex || 0}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Keyboard]}
+        keyboard={true}
         slidesPerView={1}
         loop={true}
         speed={1500} /* Slower slide transition (in milliseconds) */
