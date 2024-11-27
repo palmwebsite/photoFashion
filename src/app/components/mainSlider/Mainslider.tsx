@@ -2,7 +2,7 @@
 
 import { useScreenOrientation } from "@/app/hooks/useScreenOrientation";
 import SwiperComponent from "../swiper/SwiperComponent";
-import { getPhotos } from "./conf";
+import { getPhotos, Orientation } from "./conf";
 import { useEffect, useState } from "react";
 import { ISlide } from "../dto";
 
@@ -14,9 +14,9 @@ export function MainSlider() {
     const isPortrait = orientation.includes("portrait");
     let _images = [];
     if (isPortrait) {
-      _images = getPhotos("vertical");
+      _images = getPhotos(Orientation.Portrait);
     } else {
-      _images = getPhotos("horizontal");
+      _images = getPhotos(Orientation.Landscape);
     }
     setImages(_images);
   }, [orientation]);

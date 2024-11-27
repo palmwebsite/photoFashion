@@ -2,7 +2,7 @@ import style from "./style.module.css";
 
 export interface IFilter<T = string> {
   label: string;
-  id: T;
+  tag: T;
 }
 interface IProps {
   arr: IFilter[];
@@ -17,10 +17,10 @@ export function Filter(props: IProps) {
         return (
           <div
             className={`${style.item} ${
-              props.activeId === item.id ? style.active : ""
+              props.activeId === item.tag ? style.active : ""
             }`}
-            key={item.id}
-            onClick={() => props.onClick(item.id)}
+            key={item.tag}
+            onClick={() => props.onClick(item.tag)}
           >
             {item.label}
           </div>

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./style.module.css";
-import { FILTER, IMAGES_HORIZONTAL, IMAGES_VERTICAL } from "./conf";
+import { FILTER, IMAGES_LANDSCAPE, IMAGES_PORTRAIT } from "./conf";
 
 import SwiperComponent from "../swiper/SwiperComponent";
 import { Close } from "../hamburger/Close";
@@ -19,7 +19,7 @@ export function Gallery(props: IProps) {
   const [isSliderVisible, setIsSliderVisible] = useState(false);
   const [initialIndex, setInitialIndex] = useState(0);
   const [activeFilter, setActiveFilter] = useState(
-    FILTER.some((f) => f.id === props.filterId) ? props.filterId : "all"
+    FILTER.some((f) => f.tag === props.filterId) ? props.filterId : "all"
   );
   const [_imagesH, setImagesH] = useState<IImage[]>([]);
   const [_imagesV, setImagesV] = useState<IImage[]>([]);
@@ -27,8 +27,8 @@ export function Gallery(props: IProps) {
   useEffect(() => {
     const filter: (image: IImage) => boolean = (image) =>
       image.tags?.includes(activeFilter) || activeFilter === "all";
-    setImagesH(IMAGES_HORIZONTAL.filter((image) => filter(image)));
-    setImagesV(IMAGES_VERTICAL.filter((image) => filter(image)));
+    setImagesH(IMAGES_LANDSCAPE.filter((image) => filter(image)));
+    setImagesV(IMAGES_PORTRAIT.filter((image) => filter(image)));
   }, [activeFilter]);
 
   const handleImageClick = (index: number) => {

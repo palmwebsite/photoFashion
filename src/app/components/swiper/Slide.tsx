@@ -25,8 +25,8 @@ export function Slide(props: IProps) {
         className={`${slide.image} ${slide.layoutResponsive} ${
           props.wantsZoomEffect ? slide.zoomedIn : ""
         } ${props.wantsCover ? slide.coverImage : slide.containImage}`}
-        width={conf.isHorizontal ? 2560 : 1930}
-        height={conf.isHorizontal ? 1700 : 2560}
+        width={conf.isLandscape ? 2560 : 1930}
+        height={conf.isLandscape ? 1700 : 2560}
       />
       <div className={slide.overlay}></div>
       {conf.title && (

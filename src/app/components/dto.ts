@@ -6,7 +6,7 @@ export interface IImageBase {
 }
 
 export interface IImage extends IImageBase {
-  isHorizontal: boolean;
+  isLandscape: boolean;
 }
 
 export interface ISlide extends IImage {
