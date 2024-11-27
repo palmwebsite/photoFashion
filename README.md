@@ -51,8 +51,8 @@ Näiteks:
 },
 ```
 
-id = pildi faili nimi. selle järgi leitakse pilt üles
-alt = pimedatele juhatus, et mis pildi peal on. lihtsalt viisakusest
+- id = pildi faili nimi. selle järgi leitakse pilt üles
+- alt = pimedatele juhatus, et mis pildi peal on. lihtsalt viisakusest
 
 ### Kuidas teksti ja linki lisada?
 
@@ -68,9 +68,9 @@ Seal on tekstis järjekorra järgi. Esimene läheb esimesele slaidile, teine tei
   },
 ```
 
-h1 = slaidi ülemine tekst
-h2 = slaidi alumine tekst
-href: link.
+- h1 = slaidi ülemine tekst
+- h2 = slaidi alumine tekst
+- href: link.
 
 Linke saab olla mitu varianti:
 
@@ -113,9 +113,9 @@ Näiteks:
 }
 ```
 
-id = pildi faili nimi. selle järgi leitakse pilt üles
-alt = pimedatele juhatus, et mis pildi peal on. lihtsalt viisakusest
-tags = samas failis määratud filtrite tagid. ühel pildil võib neid olla mitu. nende järgi filtreeritakse pilte galerii lehel
+- id = pildi faili nimi. selle järgi leitakse pilt üles
+- alt = pimedatele juhatus, et mis pildi peal on. lihtsalt viisakusest
+- tags = samas failis määratud filtrite tagid. ühel pildil võib neid olla mitu. nende järgi filtreeritakse pilte galerii lehel
 
 ### Kuidas galeriisse filtereid juurde panna?
 
