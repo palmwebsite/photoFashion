@@ -1,4 +1,3 @@
-import trans from "./texts.et.json";
 import { Page } from "../components/layouts/Page";
 import { Paragraph } from "../components/layouts/Paragraph";
 import { Header } from "../components/layouts/Header";
@@ -6,11 +5,21 @@ import { Description } from "../components/layouts/Description";
 import styles from "./style.module.css";
 import Image from "next/image";
 
+const texts = {
+  title: "Minu elulugu",
+  description:
+    "Minu kirjeldus. Lorem ipsum. Halleluuja. Dios mio, ikka sigacool näen välja küll. Ise ka ei usu. ",
+  paragraph1:
+    "Esimene lõik. Lorem Ipsum. Efficiently morph customer directed internal or organic sources before multidisciplinary users. Credibly disseminate resource maximizing human capital before revolutionary e-services. Collaboratively parallel task resource-leveling markets after professional data. Professionally streamline user-centric benefits without scalable strategic theme areas. Interactively develop backward-compatible expertise through high-payoff supply chains.",
+  paragraph2:
+    "Teine lõik. Efficiently morph customer directed internal or organic sources before multidisciplinary users. Credibly disseminate resource maximizing human capital before revolutionary e-services. Collaboratively parallel task resource-leveling markets after professional data. Professionally streamline user-centric benefits without scalable strategic theme areas. Interactively develop backward-compatible expertise through high-payoff supply chains.",
+};
+
 export default function Minust() {
   return (
     <Page width="900px">
-      <Header>{trans.title}</Header>
-      <Description>{trans.description}</Description>
+      <Header>{texts.title}</Header>
+      <Description>{texts.description}</Description>
       <Image
         src={"/images/madis.jpg"}
         alt={"Madis"}
@@ -19,8 +28,8 @@ export default function Minust() {
         priority
         className={styles.image}
       />
-      <Paragraph>{trans.p1}</Paragraph>
-      <Paragraph>{trans.p2}</Paragraph>
+      <Paragraph>{texts.paragraph1}</Paragraph>
+      <Paragraph>{texts.paragraph2}</Paragraph>
     </Page>
   );
 }
