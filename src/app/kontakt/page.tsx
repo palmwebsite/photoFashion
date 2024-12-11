@@ -5,12 +5,12 @@ import { IListItem, List } from "../components/layouts/List";
 
 const texts = {
   title: "Kontakt",
-  description: "Booki mind pildistama",
-  email: "email@email label. see on label",
-  phone: "telefoninumber",
+  description: "",
+  email: "",
+  phone: "",
 };
 const CONTACTS: IListItem[] = [
-  { label: texts.email, value: "päris emaili aadress@email.com" },
+  { label: texts.email, value: "madis.palm@gmail.com" },
   { label: texts.phone, value: "+3725293128" },
 ];
 
