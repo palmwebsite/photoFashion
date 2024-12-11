@@ -6,11 +6,11 @@ import styles from "./style.module.css";
 import Image from "next/image";
 
 const texts = {
-  title: "Minu elulugu",
+  title: "Minu elulugu kogu tõde",
   description:
-    "Minu kirjeldus. Lorem ipsum. Halleluuja. Dios mio, ikka sigacool näen välja küll. Ise ka ei usu. ",
+    "Lühike versioon: Minu kirjeldus. Lorem ipsum. Halleluuja. Dios mio, ikka sigacool näen välja küll. Ise ka ei usu. ",
   paragraph1:
-    "Esimene lõik. Lorem Ipsum. Efficiently morph customer directed internal or organic sources before multidisciplinary users. Credibly disseminate resource maximizing human capital before revolutionary e-services. Collaboratively parallel task resource-leveling markets after professional data. Professionally streamline user-centric benefits without scalable strategic theme areas. Interactively develop backward-compatible expertise through high-payoff supply chains.",
+    "Pikk versioon: Esimene lõik. Lorem Ipsum. Efficiently morph customer directed internal or organic sources before multidisciplinary users. Credibly disseminate resource maximizing human capital before revolutionary e-services. Collaboratively parallel task resource-leveling markets after professional data. Professionally streamline user-centric benefits without scalable strategic theme areas. Interactively develop backward-compatible expertise through high-payoff supply chains.",
   paragraph2:
     "Teine lõik. Efficiently morph customer directed internal or organic sources before multidisciplinary users. Credibly disseminate resource maximizing human capital before revolutionary e-services. Collaboratively parallel task resource-leveling markets after professional data. Professionally streamline user-centric benefits without scalable strategic theme areas. Interactively develop backward-compatible expertise through high-payoff supply chains.",
 };

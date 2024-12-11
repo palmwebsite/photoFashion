@@ -11,11 +11,11 @@ const TEXTS: ISlideHref[] = [
     // esimese slaidi tekstid ja link
     h1: "Esimene ülemine tekst",
     h2: "Esimese slaidi alumine tekst",
-    href: goToGalleryWithFilter("loom"),
+    href: goToGalleryWithFilter("reklaam"),
   },
   {
     // teise slaidi tekstid ja link
-    h1: "Bla baa",
+    h1: "Teen kõike raha eest!",
     h2: "Kae perrä",
     href: URLS.about,
   },
@@ -23,7 +23,7 @@ const TEXTS: ISlideHref[] = [
     // kolmanda slaidi tekstid ja link
     h1: "Kassid ruulivad",
     h2: "Ilus elu",
-    href: URLS.about,
+    href: URLS.gallery,
   },
   {
     h1: "Neljas",
@@ -66,8 +66,8 @@ const _IMAGES_LANDSCAPE: IImageBase[] = [
     alt: "Wolf",
   },
   {
-    id: "beach",
-    alt: "beach",
+    id: "phone",
+    alt: "phone",
   },
 ];
 

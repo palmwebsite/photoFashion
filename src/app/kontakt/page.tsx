@@ -11,7 +11,7 @@ const texts = {
 };
 const CONTACTS: IListItem[] = [
   { label: texts.email, value: "päris emaili aadress@email.com" },
-  { label: texts.phone, value: "1234567890" },
+  { label: texts.phone, value: "+3725293128" },
 ];
 
 export default function Kontakt() {
