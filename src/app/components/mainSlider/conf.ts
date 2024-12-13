@@ -9,35 +9,35 @@ import { goToGalleryWithFilter, URLS } from "../menu/urls";
 const TEXTS: ISlideHref[] = [
   {
     // esimese slaidi tekstid ja link
-    h1: "Esimene ülemine tekst",
-    h2: "Esimese slaidi alumine tekst",
-    href: goToGalleryWithFilter("reklaam"),
+    h1: "madis palm",
+    h2: "vabakutseline fotograaf - reklaamfotod",
+    href: goToGalleryWithFilter("all"),
   },
   {
     // teise slaidi tekstid ja link
-    h1: "Teen kõike raha eest!",
-    h2: "Kae perrä",
+    h1: "madis palm",
+    h2: "portree- ja moefotod",
     href: URLS.about,
   },
   {
     // kolmanda slaidi tekstid ja link
-    h1: "Kassid ruulivad",
-    h2: "Ilus elu",
+    h1: "madis palm",
+    h2: "stuudiofotod ja fotod interjööris",
     href: URLS.gallery,
   },
   {
-    h1: "Neljas",
-    h2: "Kah neljas",
+    h1: "madis palm",
+    h2: "glamuuri ja ilupildid",
     href: URLS.about,
   },
   {
-    h1: "Viies",
-    h2: "Kah viies",
+    h1: "madis palm",
+    h2: "fotolavastused",
     href: URLS.about,
   },
   {
-    h1: "Kuues",
-    h2: "Kuuuuuuuuueeeees",
+    h1: "madis palm",
+    h2: "fotograafia alased koolitused",
     href: URLS.about,
   },
 ];
@@ -49,7 +49,7 @@ const _IMAGES_LANDSCAPE: IImageBase[] = [
     alt: "portreefoto näitlejast Merle Palmiste",
   },
   {
-    id: "brown",
+    id: "mashapruun",
 
     alt: "reklaamfoto kõrgmood disainer Ivo Nikkolo",
   },
