@@ -46,24 +46,24 @@ const TEXTS: ISlideHref[] = [
 const _IMAGES_LANDSCAPE: IImageBase[] = [
   {
     id: "mic",
-    alt: "portreefoto näitlejast",
+    alt: "portreefoto näitlejast Merle Palmiste",
   },
   {
     id: "brown",
 
-    alt: "reklaamfoto kõrgmood",
+    alt: "reklaamfoto kõrgmood disainer Ivo Nikkolo",
   },
   {
     id: "coffee",
-    alt: "ajastu foto",
+    alt: "ajastu foto Kaubamaja reklaam",
   },
   {
     id: "foggy",
-    alt: "värviline foto",
+    alt: "kunstline foto reklaamfoto",
   },
   {
     id: "wolf",
-    alt: "reklaamfoto koeraga",
+    alt: "reklaamfoto modellist koeraga",
   },
   {
     id: "phone",
