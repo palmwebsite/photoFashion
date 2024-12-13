@@ -37,7 +37,7 @@ const TEXTS: ISlideHref[] = [
   },
   {
     h1: "madis palm",
-    h2: "fotograafia alased koolitused",
+    h2: "fotograafiaalased koolitused",
     href: URLS.about,
   },
 ];
