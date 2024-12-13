@@ -1,7 +1,7 @@
 import { IImage, IImageBase } from "../dto";
 import { IFilter } from "../filter/Filter";
 
-type AllTags = "all" | "reklaam" | "vertical" | "kleit" | "ilus";
+type AllTags = "all" | "reklaam" | "portree" | "mood" | "print";
 
 
 // siin on filtrid
@@ -11,9 +11,9 @@ type AllTags = "all" | "reklaam" | "vertical" | "kleit" | "ilus";
 export const FILTER: IFilter<AllTags>[] = [
   { tag: "all", label: "Kõik" },
   { tag: "reklaam", label: "Reklaam" },
-  { tag: "kleit", label: "Kleidiga" },
-  { tag: "vertical", label: "Vertikaalne" },
-  { tag: "ilus", label: "Ilusad tüdrukud" },
+  { tag: "mood", label: "Mood" },
+  { tag: "portree", label: "Portree" },
+  { tag: "print", label: "Print" },
 ];
 
 
@@ -21,51 +21,51 @@ export const FILTER: IFilter<AllTags>[] = [
 // tags = filtirid
 // alt'i lihtsalt igno
 const _IMAGES_LANDSCAPE: IImageBase[] = [
-  { id: "blurry", alt: "Image 1", tags: [] },
-  { id: "KristiineAutos", alt: "Image 1", tags: ["reklaam"] },
-  { id: "coffee", alt: "Image 2", tags: [] },
-  { id: "foggy", alt: "Image 3", tags: ["kleit"] },
-  { id: "phone", alt: "Image 3", tags: [] },
-  { id: "liisi", alt: "Image 3", tags: [] },
-  { id: "maarja", alt: "Image 3", tags: [] },
-  { id: "pink", alt: "Image 3", tags: ["reklaam"] },
-  { id: "pintsak", alt: "Image 3", tags: [] },
-  { id: "kardin", alt: "Image 3", tags: ["kleit", "ilus"] },
-  { id: "boyband", alt: "Image 3", tags: [] },
-  { id: "puudel", alt: "Image 3", tags: [ "ilus"] },
-  { id: "mic", alt: "Image 3", tags: [] },
-  { id: "kampsun", alt: "Image 3", tags: [] },
-  { id: "brown", alt: "Image 3", tags: [] },
-  { id: "kana", alt: "Image 3", tags: ["reklaam"] },
-  { id: "suled", alt: "Image 3", tags: [] },
-  { id: "white", alt: "Image 3", tags: [] },
-  { id: "suits", alt: "Image 3", tags: [] },
-  { id: "roosa", alt: "Image 3", tags: [] },
-  { id: "wolf", alt: "Image 3", tags: ["reklaam", "kleit"] },
+  { id: "blurry", alt: "reklaamfoto", tags: ["mood"] },
+  { id: "KristiineAutos", alt: "stuudiofoto", tags: ["reklaam"] },
+  { id: "coffee", alt: "moefoto", tags: ["mood"] },
+  { id: "foggy", alt: "moefoto", tags: ["mood", "reklaam"] },
+  { id: "phone", alt: "portreefoto", tags: ["portree"] },
+  { id: "liisi", alt: "muusik", tags: ["portree", "reklaam"] },
+  { id: "maarja", alt: "kuulsused", tags: ["portree"] },
+  { id: "pink", alt: "fashion", tags: ["mood", "reklaam"] },
+  { id: "pintsak", alt: "fashionphotography", tags: ["mood", "reklaam"] },
+  { id: "kardin", alt: "portraits", tags: ["mood", "reklaam"] },
+  { id: "boyband", alt: "grupifoto", tags: ["reklaam", "portree"] },
+  { id: "puudel", alt: "loomafoto", tags: [ "mood"] },
+  { id: "mic", alt: "portree", tags: ["portree"] },
+  { id: "kampsun", alt: "tootefoto", tags: ["mood", "reklaam"] },
+  { id: "brown", alt: "foto", tags: ["mood", "reklaam"] },
+  { id: "kana", alt: "eestifotograafia", tags: ["mood"] },
+  { id: "suled", alt: "glamuur", tags: ["portree"] },
+  { id: "white", alt: "minimalism", tags: ["mood", "reklaam"] },
+  { id: "suits", alt: "buduaar", tags: ["mood"] },
+  { id: "roosa", alt: "reklaamfotod", tags: ["mood"] },
+  { id: "wolf", alt: "foto", tags: ["reklaam", "mood"] },
 ];
 
 const _IMAGES_PORTRAIT: IImageBase[] = [
   {
     id: "mashabassujuures",
     alt: "Image 3",
-    tags: ["kleit"],
+    tags: ["mood", "reklaam"],
   },
-  { id: "kleit", alt: "Image 3", tags: ["kleit"] },
-  { id: "infhrohe", alt: "Image 3", tags: ["kleit"] },
-  { id: "piret1", alt: "Image 3", tags: ["vertical"] },
-  { id: "kasukad", alt: "Image 3", tags: ["vertical"] },
+  { id: "kleit", alt: "tootefoto", tags: ["mood"] },
+  { id: "infhrohe", alt: "mood", tags: ["mood", "reklaam"] },
+  { id: "piret1", alt: "actress", tags: ["mood"] },
+  { id: "kasukad", alt: "fotograafia", tags: ["mood"] },
   {
     id: "piret2",
-    alt: "Image 3",
-    tags: ["vertical", "kleit"],
+    alt: "fotod",
+    tags: ["mood"],
   },
   {
     id: "seelik",
-    alt: "Image 3",
-    tags: ["vertical", "kleit"],
+    alt: "moefoto",
+    tags: ["mood"],
   },
-  { id: "binokkel", alt: "Image 3", tags: ["vertical"] },
-  { id: "kasukas", alt: "Image 3", tags: ["vertical"] },
+  { id: "binokkel", alt: "moefoto looduses", tags: ["mood"] },
+  { id: "kasukas", alt: "glamuurne moefoto", tags: ["mood"] },
 ];
 
 export const IMAGES_LANDSCAPE: IImage[] = _IMAGES_LANDSCAPE.map((image) => {
