@@ -46,36 +46,36 @@ const TEXTS: ISlideHref[] = [
 const _IMAGES_LANDSCAPE: IImageBase[] = [
   {
     id: "mic",
-    alt: "Mic",
+    alt: "portreefoto näitlejast",
   },
   {
     id: "brown",
 
-    alt: "Brown",
+    alt: "reklaamfoto kõrgmood",
   },
   {
     id: "coffee",
-    alt: "Coffee",
+    alt: "ajastu foto",
   },
   {
     id: "foggy",
-    alt: "Foggy",
+    alt: "värviline foto",
   },
   {
     id: "wolf",
-    alt: "Wolf",
+    alt: "reklaamfoto koeraga",
   },
   {
     id: "phone",
-    alt: "phone",
+    alt: "portreefoto filmilik",
   },
 ];
 
 // Portrait fotod
 const _IMAGES_PORTRAIT: IImageBase[] = [
   {
-    id: "binokkel",
-    alt: "binokkel",
+    id: "infhrohe",
+    alt: "feklaamfoto interjööris",
   },
   {
     id: "kleit",
