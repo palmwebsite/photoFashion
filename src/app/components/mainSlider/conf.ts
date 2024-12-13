@@ -74,16 +74,28 @@ const _IMAGES_LANDSCAPE: IImageBase[] = [
 // Portrait fotod
 const _IMAGES_PORTRAIT: IImageBase[] = [
   {
+    id: "ylle",
+    alt: "portreefoto kuulsast näitlejannast Ülle Kaljustest",
+  },
+  {
+    id: "Liisinukuga",
+    alt: "Portreefoto lauljanna Liisi Koiksonist",
+  },
+  {
     id: "infhrohe",
-    alt: "feklaamfoto interjööris",
+    alt: "moelooja ja disainer Ivo Nikkolo feklaamfoto interjööris",
   },
   {
-    id: "kleit",
-    alt: "kleit",
+    id: "mashaounaga",
+    alt: "Glamuurne reklaamfoto modell disainerkleidiga",
   },
   {
-    id: "piret2",
-    alt: "piret2",
+    id: "mashahallis",
+    alt: "reklaamfoto modell koos koeraga disainerkleidis",
+  },
+  {
+    id: "sikimaskiga",
+    alt: "buduaar foto modellist",
   },
 ];
 
