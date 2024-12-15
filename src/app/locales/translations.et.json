@@ -5,13 +5,13 @@
   "next": "Järgmine",
   "nav": {
     "home": "Esileht",
-    "homeDesc": "Kirjuta ise",
+    "homeDesc": "väike slideshow seni tehtust",
     "contact": "Kontakt",
-    "contactDesc": "Kontakti kirjeldus",
+    "contactDesc": "võta ühendust, kui soovid mind pildistama tellida",
     "about": "Minu lugu",
-    "aboutDesc": "Mingi põnev elulugu",
+    "aboutDesc": "lühemalt ja pikemalt minust endast",
     "gallery": "Galerii",
-    "galleryDesc": "Väga palju pilte"
+    "galleryDesc": "tehtud tööd läbi aegade"
   },
   "menu": {
     "menu": "menu",
