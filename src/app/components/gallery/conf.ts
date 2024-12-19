@@ -57,7 +57,9 @@ const _IMAGES_LANDSCAPE: IImageBase[] = [
   { id: "intossotse", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "kontuurlab", alt: "fotograafia", tags: ["reklaam", "mood", "grupp"] },
   { id: "boyband", alt: "grupifoto bändipilt ansambel Smilers", tags: ["reklaam", "portree", "grupp"] },
+  { id: "stereovalge", alt: "fotograafia", tags: ["reklaam", "mood", "grupp"] },
   { id: "kriskarneval", alt: "fotograafia", tags: ["reklaam", "mood", "grupp"] },
+  { id: "krispillid", alt: "fotograafia", tags: ["reklaam", "mood", "grupp"] },
   { id: "laurafoto", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "talvemuinasjutt", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "maarjalokid", alt: "fotograafia", tags: ["reklaam", "mood"] },
@@ -132,6 +134,7 @@ const _IMAGES_PORTRAIT: IImageBase[] = [
   { id: "glamgalpeegel", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "glamgalsuled", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "glamgalYlle", alt: "fotograafia", tags: ["reklaam", "mood"] },
+  { id: "dance", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "greispunane", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "greiskuldne", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "herkekotiga", alt: "fotograafia", tags: ["reklaam", "mood"] },
@@ -150,6 +153,7 @@ const _IMAGES_PORTRAIT: IImageBase[] = [
   { id: "karinnuku", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "kanaga", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "karintrepil", alt: "fotograafia", tags: ["reklaam", "mood"] },
+  { id: "eleoistub", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "keipunases", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "kuumaal", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "liisilennuk", alt: "fotograafia", tags: ["reklaam", "mood"] },
@@ -181,6 +185,7 @@ const _IMAGES_PORTRAIT: IImageBase[] = [
   { id: "viiuldaja", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "voluounad", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "yllatus", alt: "fotograafia", tags: ["reklaam", "mood"] },
+  { id: "antoniusepotiga", alt: "fotograafia", tags: ["reklaam", "mood"] },
   
 ];
 
