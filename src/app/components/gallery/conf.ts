@@ -31,19 +31,18 @@ const _IMAGES_LANDSCAPE: IImageBase[] = [
   { id: "pink", alt: "fashion", tags: ["mood", "reklaam"] },
   { id: "pintsak", alt: "fashionphotography", tags: ["mood", "reklaam"] },
   { id: "kardin", alt: "portraits", tags: ["mood", "reklaam"] },
-  { id: "boyband", alt: "grupifoto bändipilt ansambel Smilers", tags: ["reklaam", "portree"] },
   { id: "puudel", alt: "loomafoto disainer Liisi Eesmaa", tags: [ "mood"] },
   { id: "mic", alt: "portree näitleja Merle Palmiste", tags: ["portree"] },
   { id: "kampsun", alt: "tootefoto modell", tags: ["mood", "reklaam"] },
   { id: "brown", alt: "foto ilupilt", tags: ["mood", "reklaam"] },
   { id: "kana", alt: "eestifotograafia", tags: ["mood"] },
-  { id: "suled", alt: "glamuur bueauty shot", tags: ["portree"] },
   { id: "white", alt: "minimalism moefoto", tags: ["mood", "reklaam"] },
   { id: "suits", alt: "buduaar pesupildid", tags: ["mood"] },
   { id: "roosa", alt: "reklaamfotod", tags: ["mood"] },
   { id: "wolf", alt: "foto koeraga", tags: ["reklaam", "mood"] },
   { id: "aero", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "antoniusejanes", alt: "fotograafia", tags: ["reklaam", "mood"] },
+  { id: "terjepastell", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "beavent", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "britapeeglid", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "gymbeach", alt: "fotograafia", tags: ["reklaam", "mood"] },
@@ -57,8 +56,10 @@ const _IMAGES_LANDSCAPE: IImageBase[] = [
   { id: "intossastmed", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "intossotse", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "kontuurlab", alt: "fotograafia", tags: ["reklaam", "mood"] },
+  { id: "boyband", alt: "grupifoto bändipilt ansambel Smilers", tags: ["reklaam", "portree"] },
   { id: "kriskarneval", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "laurafoto", alt: "fotograafia", tags: ["reklaam", "mood"] },
+  { id: "talvemuinasjutt", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "maarjalokid", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "merlepildid", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "nikonbokeh", alt: "fotograafia", tags: ["reklaam", "mood"] },
@@ -66,8 +67,7 @@ const _IMAGES_LANDSCAPE: IImageBase[] = [
   { id: "ruttkott", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "ruudulised", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "sallendab", alt: "fotograafia", tags: ["reklaam", "mood"] },
-  { id: "talvemuinasjutt", alt: "fotograafia", tags: ["reklaam", "mood"] },
-  { id: "terjepastell", alt: "fotograafia", tags: ["reklaam", "mood"] },
+  
   
  
 ];
@@ -76,10 +76,6 @@ const _IMAGES_PORTRAIT: IImageBase[] = [
   {
     id: "ylle",
     alt: "portreefoto kuulsast näitlejannast Ülle Kaljustest", tags: ["portree", "reklaam"]
-  },
-  {
-    id: "Liisinukuga",
-    alt: "Portreefoto lauljanna Liisi Koiksonist", tags: ["portree", "reklaam"]
   },
   {
     id: "infhrohe",
@@ -154,7 +150,6 @@ const _IMAGES_PORTRAIT: IImageBase[] = [
   { id: "karinnuku", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "kanaga", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "karintrepil", alt: "fotograafia", tags: ["reklaam", "mood"] },
-  { id: "kartpruun", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "keipunases", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "kuumaal", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "liisilennuk", alt: "fotograafia", tags: ["reklaam", "mood"] },
