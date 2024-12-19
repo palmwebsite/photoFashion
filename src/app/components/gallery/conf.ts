@@ -1,7 +1,7 @@
 import { IImage, IImageBase } from "../dto";
 import { IFilter } from "../filter/Filter";
 
-type AllTags = "all" | "reklaam" | "portree" | "mood" | "print";
+type AllTags = "all" | "reklaam" | "portree" | "mood" | "grupp";
 
 
 // siin on filtrid
@@ -13,7 +13,7 @@ export const FILTER: IFilter<AllTags>[] = [
   { tag: "reklaam", label: "Reklaam" },
   { tag: "mood", label: "Mood" },
   { tag: "portree", label: "Portree" },
-  { tag: "print", label: "Print" },
+  { tag: "grupp", label: "Grupp" },
 ];
 
 
@@ -45,7 +45,7 @@ const _IMAGES_LANDSCAPE: IImageBase[] = [
   { id: "terjepastell", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "beavent", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "britapeeglid", alt: "fotograafia", tags: ["reklaam", "mood"] },
-  { id: "gymbeach", alt: "fotograafia", tags: ["reklaam", "mood"] },
+  { id: "gymbeach", alt: "fotograafia", tags: ["reklaam", "mood", "grupp"] },
   { id: "helengaraaz", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "inbeez", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "ingranaat", alt: "fotograafia", tags: ["reklaam", "mood"] },
@@ -55,9 +55,9 @@ const _IMAGES_LANDSCAPE: IImageBase[] = [
   { id: "inrannatool", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "intossastmed", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "intossotse", alt: "fotograafia", tags: ["reklaam", "mood"] },
-  { id: "kontuurlab", alt: "fotograafia", tags: ["reklaam", "mood"] },
-  { id: "boyband", alt: "grupifoto bändipilt ansambel Smilers", tags: ["reklaam", "portree"] },
-  { id: "kriskarneval", alt: "fotograafia", tags: ["reklaam", "mood"] },
+  { id: "kontuurlab", alt: "fotograafia", tags: ["reklaam", "mood", "grupp"] },
+  { id: "boyband", alt: "grupifoto bändipilt ansambel Smilers", tags: ["reklaam", "portree", "grupp"] },
+  { id: "kriskarneval", alt: "fotograafia", tags: ["reklaam", "mood", "grupp"] },
   { id: "laurafoto", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "talvemuinasjutt", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "maarjalokid", alt: "fotograafia", tags: ["reklaam", "mood"] },
