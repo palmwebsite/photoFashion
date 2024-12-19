@@ -185,7 +185,7 @@ const _IMAGES_PORTRAIT: IImageBase[] = [
   { id: "viiuldaja", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "voluounad", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "yllatus", alt: "fotograafia", tags: ["reklaam", "mood"] },
-  { id: "antoniusepotiga", alt: "fotograafia", tags: ["reklaam", "mood"] },
+  { id: "antoniusepotid", alt: "fotograafia", tags: ["reklaam", "mood"] },
   
 ];
 
