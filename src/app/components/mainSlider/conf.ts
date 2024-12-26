@@ -10,7 +10,7 @@ const TEXTS: ISlideHref[] = [
   {
     // esimese slaidi tekstid ja link
     h1: "madis palm",
-    h2: "vabakutseline fotograaf - reklaamfotod",
+    h2: "vabakutseline fotograaf",
     href: goToGalleryWithFilter("all"),
   },
   {
@@ -32,7 +32,7 @@ const TEXTS: ISlideHref[] = [
   },
   {
     h1: "madis palm",
-    h2: "fotolavastused",
+    h2: "reklaamfotod",
     href: URLS.about,
   },
   {
