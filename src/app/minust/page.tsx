@@ -6,14 +6,23 @@ import styles from "./style.module.css";
 import Image from "next/image";
 
 const texts = {
-  title: "Minu elulugu kogu tõde",
+  title: "FOTOGRAAF MADIS PALM",
   description:
-    "Lühike versioon: Minu kirjeldus. Lorem ipsum. Halleluuja. Dios mio, ikka sigacool näen välja küll. Ise ka ei usu. ",
+    "Vabakutseline moe, reklaami, portreefotograaf ja koolitaja. Tegutsenud selles valdkonnas üle 20 aasta. Lõpetanud fotograafia eriala Tartu Kõrgemas Kunstikoolis aastal 2002. ",
   paragraph1:
-    "Pikk versioon: Esimene lõik. Lorem Ipsum. Efficiently morph customer directed internal or organic sources before multidisciplinary users. Credibly disseminate resource maximizing human capital before revolutionary e-services. Collaboratively parallel task resource-leveling markets after professional data. Professionally streamline user-centric benefits without scalable strategic theme areas. Interactively develop backward-compatible expertise through high-payoff supply chains.",
+    "Pildistan eelkõige äriklientidele reklaamfotosid, mille hulgas on nii inimestega seotud fotolavastusi kui tootefotot, ürituste pilditamist tuleb samuti ette. Erijuhtudel olen ka pulmi pildistanud, ent suurem osa loomingust on siiski moepildistamine, reklaamfoto ning inimeste portreteerimine. Fotograafia-alaseid koolitusi ja kursuseid teen nii era- kui äriklientidele. ",
   paragraph2:
-    "Teine lõik. Efficiently morph customer directed internal or organic sources before multidisciplinary users. Credibly disseminate resource maximizing human capital before revolutionary e-services. Collaboratively parallel task resource-leveling markets after professional data. Professionally streamline user-centric benefits without scalable strategic theme areas. Interactively develop backward-compatible expertise through high-payoff supply chains.",
-};
+    "Alustasin oma karjääri analoogfotograafia ajal, minu Pallase lõputööks oli moefoto seeria ajakirjas Stiil, juhendajaks Herkki Erich Merila.",
+  paragraph3:
+  "Kliendid. Ajakirjadele olen üldse palju pildistanud, tooksin siinkohal Stiili kõrval välja ajakirjad Anne, Annestiil, Cosmopolitan, Elle, Kroonika, Kodukiri, FHM, Playboy, Diivan, Avenüü, Postimees, Äripäev jpt. Kliente on olnud nii Eestist kui mujalt - mõned nimekamad neist: Swedbank, Tele 2, McDonalds, Evian, Ivo Nikkolo, Monton, EMT, Marc & Andre, Kaubamaja, Viru keskus, Kristiine keskus, Ülemiste keskus, Viking Motors, Helsinki Day Spa, Rademar, Estonian Fashion Festival, Tartu Kunstimuuseum, Tallina Linnamuuseum jpt.",
+  paragraph4:
+  "Koostööpartnerid. Paljud reklaamtöödest on valminud koostöös reklaamifirmadega Kontuur, Idea, Adangels, Adell Taevas, Division. Moeloojatest, stilistidest, juuksuritest ja grimmikunstnikest mõned nimed, kellega on olnud rõõm koostööd teha: Anu Lensment, Karolin Kuusik, Jaanus Vahtra, Marju Tammik, Reet Aus, Gerly Tinn, Britt Samosen, Antonio, Katrin Sangla, Mammu, Piret Sootla, Reet Härmat, Loore Härmat, Katrin Pilk jpt.",
+  paragraph5:
+  "Koolitused. Olen läbi aastate õpetanud fotograafiat külalisõppejõuna Tartu Kõrgemas Kuntikoolis Pallas ning teinud soovijatele koolitusi alates Kuidas paremini pildistada mobiiltelefoniga kuni täismahus stuudiofoto kursusteni. Võimalikud ka eraviisilised koolitused.",
+  paragraph6:
+  "Uued kliendid ja koostööpartnerid. Olen alati avatud uutele ja huvitavatele pakkumistele nii pildistama kui koolitama. Võta ühendust, kui midagi siin galeriis nähtust sind kõnetab!"
+
+  };
 
 export default function Minust() {
   return (
@@ -30,6 +39,10 @@ export default function Minust() {
       />
       <Paragraph>{texts.paragraph1}</Paragraph>
       <Paragraph>{texts.paragraph2}</Paragraph>
+      <Paragraph>{texts.paragraph3}</Paragraph>
+      <Paragraph>{texts.paragraph4}</Paragraph>
+      <Paragraph>{texts.paragraph5}</Paragraph>
+      <Paragraph>{texts.paragraph6}</Paragraph>
     </Page>
   );
 }

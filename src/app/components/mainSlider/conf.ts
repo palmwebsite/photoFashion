@@ -22,7 +22,7 @@ const TEXTS: ISlideHref[] = [
   {
     // kolmanda slaidi tekstid ja link
     h1: "madis palm",
-    h2: "stuudiofotod ja fotod interjööris",
+    h2: "stuudiofotod",
     href: URLS.gallery,
   },
   {
@@ -37,7 +37,7 @@ const TEXTS: ISlideHref[] = [
   },
   {
     h1: "madis palm",
-    h2: "fotograafiaalased koolitused",
+    h2: "fotograafia-alased koolitused",
     href: URLS.about,
   },
 ];
