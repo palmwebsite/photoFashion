@@ -16,7 +16,7 @@ const texts = {
   paragraph3:
   "Kliendid. Ajakirjadele olen üldse palju pildistanud, tooksin siinkohal Stiili kõrval välja ajakirjad Anne, Annestiil, Cosmopolitan, Elle, Kroonika, Kodukiri, FHM, Playboy, Diivan, Avenüü, Postimees, Äripäev jpt. Kliente on olnud nii Eestist kui mujalt - mõned nimekamad neist: Swedbank, Tele 2, McDonalds, Evian, Ivo Nikkolo, Monton, EMT, Marc & Andre, Kaubamaja, Viru keskus, Kristiine keskus, Ülemiste keskus, Viking Motors, Helsinki Day Spa, Rademar, Estonian Fashion Festival, Tartu Kunstimuuseum, Tallina Linnamuuseum jpt.",
   paragraph4:
-  "Koostööpartnerid. Paljud reklaamtöödest on valminud koostöös reklaamifirmadega Kontuur, Idea, Adangels, Adell Taevas, Division. Moeloojatest, stilistidest, juuksuritest ja grimmikunstnikest mõned nimed, kellega on olnud rõõm koostööd teha: Anu Lensment, Karolin Kuusik, Jaanus Vahtra, Marju Tammik, Reet Aus, Gerly Tinn, Britt Samosen, Antonio, Katrin Sangla, Mammu, Piret Sootla, Reet Härmat, Loore Härmat, Katrin Pilk jpt.",
+  "Koostööpartnerid. Paljud reklaamtöödest on valminud koostöös reklaamifirmadega Kontuur, Idea, Adangels, Adell Taevas, Division. Moeloojatest, stilistidest, juuksuritest ja grimmikunstnikest mõned nimed, kellega on olnud rõõm koostööd teha: Anu Lensment, Liisi Eesmaa, Karolin Kuusik, Jaanus Vahtra, Marju Tammik, Reet Aus, Gerly Tinn, Britt Samosen, Antonio, Katrin Sangla, Anu Konze, Mammu, Piret Sootla, Reet Härmat, Loore Härmat, Katrin Pilk jpt.",
   paragraph5:
   "Koolitused. Olen läbi aastate õpetanud fotograafiat külalisõppejõuna Tartu Kõrgemas Kuntikoolis Pallas ning teinud soovijatele koolitusi alates Kuidas paremini pildistada mobiiltelefoniga kuni täismahus stuudiofoto kursusteni. Võimalikud ka eraviisilised koolitused.",
   paragraph6:
