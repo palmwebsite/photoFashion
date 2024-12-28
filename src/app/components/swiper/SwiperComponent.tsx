@@ -9,7 +9,7 @@ import buttons from "./style.buttons.module.css";
 import { Navigation, Pagination, Keyboard } from "swiper/modules";
 import trans from "@/app/locales/translations.et.json";
 import { Slide } from "./Slide";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ISlide } from "../dto";
 
 interface IProps {
@@ -20,21 +20,24 @@ interface IProps {
   wantsCover: boolean;
 }
 
+type PaginationType = "bullets" | "fraction" | "progressbar" | "custom";
+const bullets: PaginationType = "bullets";
+const fraction: PaginationType = "fraction";
+
 export default function SwiperComponent(props: IProps) {
-  console.log("rerender");
   const [activeIndex, setActiveIndex] = useState<number | undefined>();
   const [indexHistory, setIndexHistory] = useState<number[]>([]);
 
   const pagination = {
-    clickable: true,
-    renderBullet: function (index: number, className: string) {
-      return `<span class="${styles.progressBarItem} ${className}"></span>`;
-    },
+    type: props.images.length < 15 ? bullets : fraction,
+    clickable: props.images.length < 15,
+    renderBullet:
+      props.images.length < 15
+        ? function (index: number, className: string) {
+            return `<span class="${styles.progressBarItem} ${className}"></span>`;
+          }
+        : undefined,
   };
-
-  useEffect(() => {
-    console.log("indexHistory", indexHistory);
-  }, [indexHistory]);
   return (
     <div className={styles.swiperContainer}>
       {/* Custom Navigation Buttons */}
@@ -59,7 +62,6 @@ export default function SwiperComponent(props: IProps) {
           nextEl: '[data-swiper-nav="next"]',
         }}
         onSlideChange={(swiper) => {
-          console.log(swiper);
           const _realIndex = swiper.realIndex;
           setActiveIndex(_realIndex); // Track the active slide
 

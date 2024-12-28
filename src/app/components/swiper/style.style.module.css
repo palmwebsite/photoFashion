@@ -63,3 +63,21 @@
 .progressBarItem:hover {
   border-color: var(--main-red);
 }
+
+/* Fraction pagination container */
+.swiper-pagination-fraction {
+  color: #ff5722; /* Change fraction text color */
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold; /* Make it bold */
+  text-align: center; /* Center-align the fraction */
+}
+
+/* Style for the current index */
+.swiper-pagination-fraction .swiper-pagination-current {
+  color: #3f51b5; /* Change color for the active slide number */
+}
+
+/* Style for the total slides count */
+.swiper-pagination-fraction .swiper-pagination-total {
+  color: #757575; /* Change color for the total slides number */
+}

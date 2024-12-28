@@ -53,3 +53,13 @@ a {
     color-scheme: dark;
   }
 }
+
+.swiper-pagination.swiper-pagination-fraction {
+  color: var(--main-light);
+}
+.swiper-pagination-current {
+  color: var(--main-light);
+}
+.swiper-pagination-total {
+  color: var(--main-light);
+}
