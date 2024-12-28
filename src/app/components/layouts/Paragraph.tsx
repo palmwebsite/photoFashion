@@ -1,6 +1,13 @@
 import { PropsWithChildren } from "react";
-import style from "./page.module.css";
+import css from "./page.module.css";
 
-export function Paragraph(props: PropsWithChildren) {
-  return <p className={style.paragraph}>{props.children}</p>;
+interface IProps {
+  style?: any;
+}
+export function Paragraph(props: PropsWithChildren<IProps>) {
+  return (
+    <p style={props.style} className={css.paragraph}>
+      {props.children}
+    </p>
+  );
 }
