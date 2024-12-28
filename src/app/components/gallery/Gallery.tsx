@@ -32,13 +32,11 @@ export function Gallery(props: IProps) {
   }, [activeFilter]);
 
   const handleImageClick = (index: number) => {
-    console.log(index);
     setInitialIndex(index);
     setIsSliderVisible(true); // Show the slider when an image is clicked
   };
 
   const handleFilterClick = (id: string) => {
-    console.log(id);
     setActiveFilter(id);
   };
 

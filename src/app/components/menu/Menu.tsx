@@ -14,9 +14,6 @@ export function Menu() {
   const [isActive, setIsActive] = useState(false);
   const iconsColor: ColorScheme = menuBgIsDark ? "light" : "dark";
 
-  useEffect(() => {
-    console.log("change happened", isActive);
-  }, [isActive]);
   return (
     <div
       className={`${style.menu} ${isActive ? style.isVisible : ""} ${
