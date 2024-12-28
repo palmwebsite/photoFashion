@@ -30,7 +30,7 @@ export function Slide(props: IProps) {
       />
       <div className={slide.overlay}></div>
       {conf.title && (
-        <Link href={conf.title.href}>
+        <Link href={conf.title.href} className={slide.link}>
           <div className={slide.innerSlogans}>
             <h1>{conf.title.h1}</h1>
             <h2>{conf.title.h2}</h2>

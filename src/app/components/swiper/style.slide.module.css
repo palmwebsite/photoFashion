@@ -61,10 +61,14 @@
   opacity: 0.7; /* Black overlay becomes visible on slide-out */
 }
 
-.innerSlogans {
+.link {
   position: absolute;
-  bottom: 50px; /* Place it above the bottom */
+  bottom: 100px; /* Place it above the bottom */
   left: 100px; /* Align to the left */
+  z-index: 10;
+}
+.innerSlogans {
+  position: "relative";
   z-index: 10;
   max-width: 700px; /* Optional: limit width */
   height: auto; /* Let content determine height */
