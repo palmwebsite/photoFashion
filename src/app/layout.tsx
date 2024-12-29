@@ -18,6 +18,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+// this metadata is used automatically by vercel (i think)
 export const metadata: Metadata = {
   title: metaTitle,
   description: metaDescription,

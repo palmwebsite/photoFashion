@@ -13,13 +13,7 @@ export default function Kontakt() {
     <Page width="900px">
       <Header>{texts.title}</Header>
       <ListItem value={phone} />
-      <ListItem
-        value={
-          <a href={`mailto:${email}?subject=Fotograaf Madis Palm&body=Tere.`}>
-            {email}
-          </a>
-        }
-      />
+      <ListItem value={<a href={`mailto:${email}`}>{email}</a>} />
     </Page>
   );
 }
