@@ -1,4 +1,5 @@
 import trans from "@/app/locales/translations.et.json";
+import { TagType } from "../gallery/conf";
 const nav = trans.nav;
 interface IUrl {
   label: string;
@@ -13,8 +14,8 @@ export const URLS = {
   gallery: "galerii",
 };
 
-export function goToGalleryWithFilter(filter: string): string {
-  const link = `${URLS.gallery}:${filter}`;
+export function goToGalleryWithFilter(filter: TagType[]): string {
+  const link = `${URLS.gallery}:${filter.join(",")}`;
   return encodeURIComponent(link);
 }
 

@@ -1,13 +1,14 @@
+import { TagType } from "../gallery/conf";
 import style from "./style.module.css";
 
-export interface IFilter<T = string> {
+export interface IFilter {
   label: string;
-  tag: T;
+  tag: TagType;
 }
 interface IProps {
   arr: IFilter[];
-  onClick: (id: string) => void;
-  activeId: string;
+  onClick: (id: TagType) => void;
+  activeIds: TagType[] | undefined;
 }
 
 export function Filter(props: IProps) {
@@ -17,7 +18,7 @@ export function Filter(props: IProps) {
         return (
           <div
             className={`${style.item} ${
-              props.activeId === item.tag ? style.active : ""
+              (props.activeIds || []).includes(item.tag) ? style.active : ""
             }`}
             key={item.tag}
             onClick={() => props.onClick(item.tag)}

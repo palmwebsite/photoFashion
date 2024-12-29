@@ -3,7 +3,12 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./style.module.css";
-import { FILTER, IMAGES_LANDSCAPE, IMAGES_PORTRAIT } from "./conf";
+import {
+  TagType,
+  FILTER as FILTERS,
+  IMAGES_LANDSCAPE,
+  IMAGES_PORTRAIT,
+} from "./conf";
 
 import SwiperComponent from "../swiper/SwiperComponent";
 import { Close } from "../hamburger/Close";
@@ -16,19 +21,42 @@ interface IProps {
 }
 
 export function Gallery(props: IProps) {
+  const propsFilterId = props.filterId;
   const [isSliderVisible, setIsSliderVisible] = useState(false);
   const [initialIndex, setInitialIndex] = useState(0);
-  const [activeFilter, setActiveFilter] = useState(
-    FILTER.some((f) => f.tag === props.filterId) ? props.filterId : "all"
-  );
+  const [activeFilter, setActiveFilter] = useState<TagType[] | undefined>();
   const [_imagesH, setImagesH] = useState<IImage[]>([]);
   const [_imagesV, setImagesV] = useState<IImage[]>([]);
 
   useEffect(() => {
-    const filter: (image: IImage) => boolean = (image) =>
-      image.tags?.includes(activeFilter) || activeFilter === "all";
-    setImagesH(IMAGES_LANDSCAPE.filter((image) => filter(image)));
-    setImagesV(IMAGES_PORTRAIT.filter((image) => filter(image)));
+    const filterIds: TagType[] = propsFilterId.split(",") as TagType[];
+    const validFilters = filterIds.filter((filterId: TagType) =>
+      FILTERS.some((f) => f.tag === filterId)
+    );
+    // const f2 = FILTER.some((f) => f.tag === props.filterId)
+    //   ? props.filterId
+    //   : "all";
+    if (!!validFilters && validFilters.length > 0) {
+      setActiveFilter(validFilters);
+    } else {
+      setActiveFilter(["all"]);
+    }
+  }, [propsFilterId]);
+  useEffect(() => {
+    if (!!activeFilter && activeFilter.length > 0) {
+      const filter: (image: IImage) => boolean = (image) => {
+        if ((activeFilter || []).includes("all")) {
+          return true;
+        } else {
+          const include = (image.tags || []).some((tag) =>
+            activeFilter.includes(tag)
+          );
+          return include;
+        }
+      };
+      setImagesH(IMAGES_LANDSCAPE.filter((image) => filter(image)));
+      setImagesV(IMAGES_PORTRAIT.filter((image) => filter(image)));
+    }
   }, [activeFilter]);
 
   const handleImageClick = (index: number) => {
@@ -36,16 +64,16 @@ export function Gallery(props: IProps) {
     setIsSliderVisible(true); // Show the slider when an image is clicked
   };
 
-  const handleFilterClick = (id: string) => {
-    setActiveFilter(id);
+  const handleFilterClick = (id: TagType) => {
+    setActiveFilter([id]);
   };
 
   return (
     <Page>
       <Filter
-        arr={FILTER}
+        arr={FILTERS}
         onClick={handleFilterClick}
-        activeId={activeFilter}
+        activeIds={activeFilter}
       />
       <div className={styles.gallery}>
         <ImageList

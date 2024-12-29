@@ -1,14 +1,13 @@
 import { IImage, IImageBase } from "../dto";
 import { IFilter } from "../filter/Filter";
 
-type AllTags = "all" | "reklaam" | "portree" | "mood" | "grupp";
-
+export type TagType = "all" | "reklaam" | "portree" | "mood" | "grupp";
 
 // siin on filtrid
 // tag = id (kasutaja seda ei näe)
 // urlis kasutatakse tagi localhost:3000/galerii:reklaam
 // label = see, mida kasutaja näeb
-export const FILTER: IFilter<AllTags>[] = [
+export const FILTER: IFilter[] = [
   { tag: "all", label: "Kõik" },
   { tag: "reklaam", label: "Reklaam" },
   { tag: "mood", label: "Mood" },
@@ -16,22 +15,33 @@ export const FILTER: IFilter<AllTags>[] = [
   { tag: "grupp", label: "Grupp" },
 ];
 
-
 // id = pildi nimi
 // tags = filtirid
 // alt'i lihtsalt igno
 const _IMAGES_LANDSCAPE: IImageBase[] = [
   { id: "blurry", alt: "reklaamfoto modellist", tags: ["mood"] },
-  { id: "KristiineAutos", alt: "stuudiofoto inimesed grupis", tags: ["reklaam"] },
+  {
+    id: "KristiineAutos",
+    alt: "stuudiofoto inimesed grupis",
+    tags: ["reklaam"],
+  },
   { id: "coffee", alt: "moefoto ajastu", tags: ["mood"] },
   { id: "foggy", alt: "moefoto tippmodell", tags: ["mood", "reklaam"] },
-  { id: "phone", alt: "portreefoto näitleja Merle Palmiste", tags: ["portree"] },
-  { id: "liisi", alt: "muusik Liisi Koiksoni portree", tags: ["portree", "reklaam"] },
+  {
+    id: "phone",
+    alt: "portreefoto näitleja Merle Palmiste",
+    tags: ["portree"],
+  },
+  {
+    id: "liisi",
+    alt: "muusik Liisi Koiksoni portree",
+    tags: ["portree", "reklaam"],
+  },
   { id: "maarja", alt: "kuulsused Laulja Maarja Liis Ilus", tags: ["portree"] },
   { id: "pink", alt: "fashion", tags: ["mood", "reklaam"] },
   { id: "pintsak", alt: "fashionphotography", tags: ["mood", "reklaam"] },
   { id: "kardin", alt: "portraits", tags: ["mood", "reklaam"] },
-  { id: "puudel", alt: "loomafoto disainer Liisi Eesmaa", tags: [ "mood"] },
+  { id: "puudel", alt: "loomafoto disainer Liisi Eesmaa", tags: ["mood"] },
   { id: "mic", alt: "portree näitleja Merle Palmiste", tags: ["portree"] },
   { id: "kampsun", alt: "tootefoto modell", tags: ["mood", "reklaam"] },
   { id: "brown", alt: "foto ilupilt", tags: ["mood", "reklaam"] },
@@ -56,9 +66,17 @@ const _IMAGES_LANDSCAPE: IImageBase[] = [
   { id: "intossastmed", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "intossotse", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "kontuurlab", alt: "fotograafia", tags: ["reklaam", "mood", "grupp"] },
-  { id: "boyband", alt: "grupifoto bändipilt ansambel Smilers", tags: ["reklaam", "grupp"] },
+  {
+    id: "boyband",
+    alt: "grupifoto bändipilt ansambel Smilers",
+    tags: ["reklaam", "grupp"],
+  },
   { id: "stereovalge", alt: "fotograafia", tags: ["reklaam", "mood", "grupp"] },
-  { id: "kriskarneval", alt: "fotograafia", tags: ["reklaam", "mood", "grupp"] },
+  {
+    id: "kriskarneval",
+    alt: "fotograafia",
+    tags: ["reklaam", "mood", "grupp"],
+  },
   { id: "krispillid", alt: "fotograafia", tags: ["reklaam", "mood", "grupp"] },
   { id: "laurafoto", alt: "fotograafia", tags: ["reklaam", "mood", "portree"] },
   { id: "talvemuinasjutt", alt: "fotograafia", tags: ["reklaam", "mood"] },
@@ -69,31 +87,33 @@ const _IMAGES_LANDSCAPE: IImageBase[] = [
   { id: "ruttkott", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "ruudulised", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "sallendab", alt: "fotograafia", tags: ["reklaam"] },
-  
-  
- 
 ];
 
 const _IMAGES_PORTRAIT: IImageBase[] = [
   {
     id: "ylle",
-    alt: "portreefoto kuulsast näitlejannast Ülle Kaljustest", tags: ["portree", "reklaam"]
+    alt: "portreefoto kuulsast näitlejannast Ülle Kaljustest",
+    tags: ["portree", "reklaam"],
   },
   {
     id: "infhrohe",
-    alt: "moelooja ja disainer Ivo Nikkolo feklaamfoto interjööris", tags: ["mood", "reklaam"]
+    alt: "moelooja ja disainer Ivo Nikkolo feklaamfoto interjööris",
+    tags: ["mood", "reklaam"],
   },
   {
     id: "mashaounaga",
-    alt: "Glamuurne reklaamfoto modell disainerkleidiga", tags: ["mood", "reklaam"]
+    alt: "Glamuurne reklaamfoto modell disainerkleidiga",
+    tags: ["mood", "reklaam"],
   },
   {
     id: "mashahallis",
-    alt: "reklaamfoto modell koos koeraga disainerkleidis", tags: ["mood", "reklaam"]
+    alt: "reklaamfoto modell koos koeraga disainerkleidis",
+    tags: ["mood", "reklaam"],
   },
   {
     id: "sikimaskiga",
-    alt: "buduaar foto modellist", tags: ["mood"]
+    alt: "buduaar foto modellist",
+    tags: ["mood"],
   },
   {
     id: "mashabassujuures",
@@ -132,7 +152,11 @@ const _IMAGES_PORTRAIT: IImageBase[] = [
   { id: "eleveider", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "glamgalHelena", alt: "fotograafia", tags: ["mood", "portree"] },
   { id: "glamgalpeegel", alt: "fotograafia", tags: ["mood", "portree"] },
-  { id: "glamgalsuled", alt: "fotograafia", tags: ["reklaam", "mood", "portree"] },
+  {
+    id: "glamgalsuled",
+    alt: "fotograafia",
+    tags: ["reklaam", "mood", "portree"],
+  },
   { id: "glamgalYlle", alt: "fotograafia", tags: ["mood", "portree"] },
   { id: "dance", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "greispunane", alt: "fotograafia", tags: ["reklaam", "mood"] },
@@ -186,7 +210,6 @@ const _IMAGES_PORTRAIT: IImageBase[] = [
   { id: "voluounad", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "yllatus", alt: "fotograafia", tags: ["reklaam", "mood"] },
   { id: "antoniusepotid", alt: "fotograafia", tags: ["reklaam", "mood"] },
-  
 ];
 
 export const IMAGES_LANDSCAPE: IImage[] = _IMAGES_LANDSCAPE.map((image) => {

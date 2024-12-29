@@ -11,34 +11,34 @@ const TEXTS: ISlideHref[] = [
     // esimese slaidi tekstid ja link
     h1: "madis palm",
     h2: "vabakutseline fotograaf",
-    href: goToGalleryWithFilter("all"),
+    href: URLS.about,
   },
   {
     // teise slaidi tekstid ja link
     h1: "madis palm",
     h2: "portree- ja moefotod",
-    href: URLS.about,
+    href: goToGalleryWithFilter(["mood", "portree"]),
   },
   {
     // kolmanda slaidi tekstid ja link
     h1: "madis palm",
     h2: "stuudiofotod",
-    href: URLS.gallery,
+    href: goToGalleryWithFilter(["portree"]),
   },
   {
     h1: "madis palm",
     h2: "glamuuri ja ilupildid",
-    href: URLS.about,
+    href: goToGalleryWithFilter(["grupp"]),
   },
   {
     h1: "madis palm",
     h2: "reklaamfotod",
-    href: URLS.about,
+    href: goToGalleryWithFilter(["reklaam"]),
   },
   {
     h1: "madis palm",
     h2: "fotograafia-alased koolitused",
-    href: URLS.about,
+    href: goToGalleryWithFilter(["all"]),
   },
 ];
 

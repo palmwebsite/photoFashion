@@ -1,8 +1,10 @@
+import { TagType } from "./gallery/conf";
+
 export type ColorScheme = "light" | "dark";
 export interface IImageBase {
   alt: string;
   id: string;
-  tags?: string[];
+  tags?: TagType[];
 }
 
 export interface IImage extends IImageBase {
