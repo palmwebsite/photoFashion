@@ -47,3 +47,29 @@
   overflow: hidden;
   z-index: 21;
 }
+
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-dark);
+  color: var(--main-light);
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  scale: 1;
+}
+
+.scrollToTop:hover {
+  opacity: 1;
+  scale: 1.1;
+}

@@ -27,21 +27,20 @@ export function Gallery(props: IProps) {
   const [activeFilter, setActiveFilter] = useState<TagType[] | undefined>();
   const [_imagesH, setImagesH] = useState<IImage[]>([]);
   const [_imagesV, setImagesV] = useState<IImage[]>([]);
+  const [showScrollToTop, setShowScrollToTop] = useState(false); // State for scroll-to-top button
 
   useEffect(() => {
     const filterIds: TagType[] = (propsFilterId || "").split(",") as TagType[];
     const validFilters = filterIds.filter((filterId: TagType) =>
       FILTERS.some((f) => f.tag === filterId)
     );
-    // const f2 = FILTER.some((f) => f.tag === props.filterId)
-    //   ? props.filterId
-    //   : "all";
     if (!!validFilters && validFilters.length > 0) {
       setActiveFilter(validFilters);
     } else {
       setActiveFilter(["all"]);
     }
   }, [propsFilterId]);
+
   useEffect(() => {
     if (!!activeFilter && activeFilter.length > 0) {
       const filter: (image: IImage) => boolean = (image) => {
@@ -58,6 +57,21 @@ export function Gallery(props: IProps) {
       setImagesV(IMAGES_PORTRAIT.filter((image) => filter(image)));
     }
   }, [activeFilter]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollToTop(window.scrollY > 300); // Show button after scrolling 300px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll to top
+  };
 
   const handleImageClick = (index: number) => {
     setInitialIndex(index);
@@ -81,7 +95,7 @@ export function Gallery(props: IProps) {
           type={"h"}
           handleImageClick={handleImageClick}
           horizontalImageLength={_imagesH.length}
-        />{" "}
+        />
       </div>
 
       <div className={styles.gallery}>
@@ -93,7 +107,6 @@ export function Gallery(props: IProps) {
         />
       </div>
 
-      {/* Full-Width and Full-Height Swiper Slider */}
       {isSliderVisible && (
         <div className={styles.slider}>
           <Close
@@ -108,6 +121,16 @@ export function Gallery(props: IProps) {
             wantsCover={false}
           />
         </div>
+      )}
+
+      {showScrollToTop && (
+        <button
+          onClick={handleScrollToTop}
+          className={styles.scrollToTop}
+          aria-label="Scroll to top"
+        >
+          ↑
+        </button>
       )}
     </Page>
   );
