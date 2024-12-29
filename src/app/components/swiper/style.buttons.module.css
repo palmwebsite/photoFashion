@@ -63,3 +63,11 @@
     height: 20px;
   }
 }
+
+.prevButton:focus-visible {
+  outline: none;
+}
+
+.nextButton:focus-visible {
+  outline: none;
+}
