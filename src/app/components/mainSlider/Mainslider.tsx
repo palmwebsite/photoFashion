@@ -22,6 +22,7 @@ export function MainSlider() {
   }, [orientation]);
   return (
     <SwiperComponent
+      wantLoop={true}
       images={images}
       wantsTextOnNavigation={true}
       wantsZoomEffect={true}

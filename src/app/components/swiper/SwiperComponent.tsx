@@ -18,6 +18,7 @@ interface IProps {
   initialIndex?: number;
   wantsZoomEffect: boolean;
   wantsCover: boolean;
+  wantLoop: boolean;
 }
 
 type PaginationType = "bullets" | "fraction" | "progressbar" | "custom";

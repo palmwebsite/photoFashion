@@ -114,6 +114,7 @@ export function Gallery(props: IProps) {
             onClick={() => setIsSliderVisible(false)}
           />
           <SwiperComponent
+            wantLoop={false}
             images={_imagesH.concat(_imagesV)}
             wantsTextOnNavigation={false}
             initialIndex={initialIndex}

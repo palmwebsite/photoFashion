@@ -27,6 +27,7 @@ export function Slide(props: IProps) {
         } ${props.wantsCover ? slide.coverImage : slide.containImage}`}
         width={conf.isLandscape ? 2560 : 1930}
         height={conf.isLandscape ? 1700 : 2560}
+        loading="lazy"
       />
       <div className={slide.overlay}></div>
       {conf.title && (
