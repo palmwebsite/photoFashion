@@ -6,7 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from "./style.style.module.css";
 import buttons from "./style.buttons.module.css";
-import { Navigation, Pagination, Keyboard } from "swiper/modules";
+import { Navigation, Pagination, Keyboard, Virtual } from "swiper/modules";
 import trans from "@/app/locales/translations.et.json";
 import { Slide } from "./Slide";
 import { useState } from "react";
@@ -53,7 +53,7 @@ export default function SwiperComponent(props: IProps) {
         className={styles.mySwiper}
         pagination={pagination}
         initialSlide={props.initialIndex || 0}
-        modules={[Navigation, Pagination, Keyboard]}
+        modules={[Navigation, Pagination, Keyboard, Virtual]}
         keyboard={true}
         slidesPerView={1}
         loop={true}
@@ -62,6 +62,7 @@ export default function SwiperComponent(props: IProps) {
           prevEl: '[data-swiper-nav="prev"]',
           nextEl: '[data-swiper-nav="next"]',
         }}
+        virtual={true}
         onSlideChange={(swiper) => {
           const _realIndex = swiper.realIndex;
           setActiveIndex(_realIndex); // Track the active slide
@@ -80,7 +81,7 @@ export default function SwiperComponent(props: IProps) {
         }}
       >
         {props.images.map((photo, index: number) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} virtualIndex={index}>
             <Slide
               conf={photo}
               isActive={index === activeIndex}
