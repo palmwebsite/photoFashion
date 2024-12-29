@@ -29,7 +29,7 @@ export function Gallery(props: IProps) {
   const [_imagesV, setImagesV] = useState<IImage[]>([]);
 
   useEffect(() => {
-    const filterIds: TagType[] = propsFilterId.split(",") as TagType[];
+    const filterIds: TagType[] = (propsFilterId || "").split(",") as TagType[];
     const validFilters = filterIds.filter((filterId: TagType) =>
       FILTERS.some((f) => f.tag === filterId)
     );
