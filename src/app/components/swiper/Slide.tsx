@@ -1,3 +1,4 @@
+import React, { memo } from "react";
 import Image from "next/image";
 import slide from "./style.slide.module.css";
 import Link from "next/link";
@@ -10,8 +11,10 @@ interface IProps {
   wantsZoomEffect: boolean;
   wantsCover: boolean;
 }
-export function Slide(props: IProps) {
+export const Slide = memo(function Slide(props: IProps) {
+  console.log("rerendering slide", props.conf.id);
   const conf = props.conf;
+
   return (
     <div
       className={`${slide.slideContainer} ${
@@ -40,4 +43,4 @@ export function Slide(props: IProps) {
       )}
     </div>
   );
-}
+});
