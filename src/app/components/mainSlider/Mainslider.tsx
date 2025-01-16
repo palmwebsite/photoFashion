@@ -1,5 +1,7 @@
 "use client";
 
+//Mainslider.tsx
+
 import { useScreenOrientation } from "@/app/hooks/useScreenOrientation";
 import SwiperComponent from "../swiper/SwiperComponent";
 import { getPhotos, Orientation } from "./conf";
@@ -20,13 +22,16 @@ export function MainSlider() {
     }
     setImages(_images);
   }, [orientation]);
-  return (
+  return images.length > 0 ? (
     <SwiperComponent
       wantLoop={true}
       images={images}
       wantsTextOnNavigation={true}
       wantsZoomEffect={true}
       wantsCover={true}
+      initialIndex={0}
     />
+  ) : (
+    <div></div>
   );
 }
